@@ -13,9 +13,10 @@
 
 ### Technologies
 
-- React
 - Installations:
+  - React
   - Bootstrap
-  - FontAwesome
+  - ReactIcons
+  - JQuery & Popper.js
+  - React-Router-DOM
   - MaterialUI
-  -
