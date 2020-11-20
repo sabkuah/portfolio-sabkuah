@@ -1,0 +1,26 @@
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+//Colors
+$brand-color: #8bd054;
+$body-bg-color: #fffcec;
+$text-color-light: #c5e7a9;
+$hover-color: #bce3ed;
+//Fonts
+$body-font: "Nunito", sans-serif;
+//Utility Variables
+
+//Layout Variables
+
+//function to convert px to ems
+//bd stands for browser default = 16px
+@function em($px, $bd: 16) {
+  @return #{$px/$bd}em;
+}
+
+//Media Query widths
+$desktopMedium: em(1250);
+$tabletLandscape: em(1024);
+$tabletPortrait: em(850);
+$phoneLandscape: em(670);
+$phonePortrait: em(420);

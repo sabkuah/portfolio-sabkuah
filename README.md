@@ -15,6 +15,7 @@
 
 - Installations:
   - React
+  - SASS
   - Bootstrap
   - ReactIcons
   - JQuery & Popper.js

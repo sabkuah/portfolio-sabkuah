@@ -1,0 +1,14 @@
+nav {
+  .nav-item {
+    font-family: $body-font;
+    color: $brand-color;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-right: 10px;
+  }
+
+  a:hover {
+    color: $hover-color;
+  }
+}
