@@ -39,12 +39,12 @@ export default class Nav extends Component {
                 Contact
               </NavLink>
             </li>
-            <div className="social-icons">
-              <FiGithub className="icon" />
-              <FiLinkedin className="icon" />
-              <FiMail className="icon" />
-            </div>
           </div>
+        </div>
+        <div className="social-icons">
+          <FiGithub className="icon" />
+          <FiLinkedin className="icon" />
+          <FiMail className="icon" />
         </div>
       </nav>
     );

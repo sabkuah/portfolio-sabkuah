@@ -35,9 +35,11 @@ export default class Landing extends Component {
               </p>
             </div> */}
             <div className="board-wrapper">
-              <div className="frame">
-                <div className="sticky">
-                  <h3 className="sticky-text">this is sticky #1!</h3>
+              <div className="frame-outer">
+                <div className="frame-inner">
+                  <div className="sticky">
+                    <h3 className="sticky-text">this is sticky #1!</h3>
+                  </div>
                 </div>
               </div>
             </div>
