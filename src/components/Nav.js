@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
 
 export default class Nav extends Component {
   render() {
@@ -24,7 +25,7 @@ export default class Nav extends Component {
               </NavLink>
             </li>
             <li className="nav-item nav-link">
-              <NavLink to="/aboutme" exact className="nav-link">
+              <NavLink to="/about" exact className="nav-link">
                 About Me
               </NavLink>
             </li>
@@ -38,6 +39,11 @@ export default class Nav extends Component {
                 Contact
               </NavLink>
             </li>
+            <div className="social-icons">
+              <FiGithub className="icon" />
+              <FiLinkedin className="icon" />
+              <FiMail className="icon" />
+            </div>
           </div>
         </div>
       </nav>

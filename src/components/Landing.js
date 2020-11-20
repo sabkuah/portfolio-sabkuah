@@ -15,7 +15,9 @@ export default class Landing extends Component {
                 <Link to="/portfolio">
                   <Button variant="contained">See Portfolio</Button>
                 </Link>
-                <Button variant="contained">About Me</Button>
+                <Link to="/about">
+                  <Button variant="contained">About Me</Button>
+                </Link>
               </div>
             </div>
           </div>
