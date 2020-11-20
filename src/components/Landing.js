@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
+import board from "../images/3.png";
 
 export default class Landing extends Component {
   render() {
@@ -21,7 +22,26 @@ export default class Landing extends Component {
               </div>
             </div>
           </div>
-          <div id="landing-right" className="col"></div>
+          <div id="landing-right" className="col">
+            {/* <div className="board-wrapper">
+              <img src={board} className="img" />
+            </div>
+            <div className="content">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
+                quas rem iste delectus recusandae, mollitia consequuntur maiores
+                earum optio. Quasi commodi laborum soluta, aliquid libero
+                doloremque nam obcaecati veritatis repudiandae.
+              </p>
+            </div> */}
+            <div className="board-wrapper">
+              <div className="frame">
+                <div className="sticky">
+                  <h3 className="sticky-text">this is sticky #1!</h3>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
