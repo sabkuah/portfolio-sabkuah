@@ -36,39 +36,126 @@
 
   .title-sticky {
     background-color: $body-bg-color;
-    height: 15%;
-    width: 30%;
-    margin-top: 2%;
-    z-index: 1;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+    margin: 2%;
 
-  .sticky-text {
-    color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-  }
-
-  .sticky {
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-
-    li {
+    .title {
+      padding: 2%;
+      font-family: $body-font;
+      font-weight: bold;
     }
+  }
 
-    .sub-list {
-      color: $brand-color;
-      font-style: italic;
-      font-size: smaller;
+  .education {
+    margin: 2%;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+
+      .sub-list {
+        color: $brand-color;
+        font-style: italic;
+        font-size: smaller;
+      }
     }
+  }
+}
+
+.biography {
+  .container {
+    width: 320px;
+    margin: 0 auto;
+    padding-top: 200px;
+  }
+  .paper {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    background-color: #faf8e5;
+    border: 1px solid #e3e3e3;
+  }
+  .red-line {
+    height: 250px;
+    width: 1px;
+    background-color: #ef8b8b;
+    float: left;
+    margin-left: 4px;
+  }
+  .first {
+    margin-left: 40px;
+  }
+  ul#lines {
+    margin-top: 40px;
+  }
+  ul#lines li {
+    height: 28px;
+    line-height: 28px;
+    color: #4d84c8;
+    font-family: Georgia;
+    font-style: italic;
+    font-size: 16px;
+    width: 225px;
+    border-top: 1px solid #f2f0df;
+    padding-left: 75px;
+  }
+
+  .tape {
+    position: absolute;
+    top: -15px;
+    right: 80px;
+    width: 130px;
+    height: 35px;
+    background-color: #fff;
+    opacity: 0.6;
+    border-left: 1px dashed rgba(0, 0, 0, 0.1);
+    border-right: 1px dashed rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 1px 0px #cccccc;
+    -moz-box-shadow: 0px 0px 1px 0px #cccccc;
+    box-shadow: 0px 0px 1px 0px #cccccc;
+    -webkit-transform: rotate(-2deg) skew(0, 0) translate(0%, -5px);
+    -moz-transform: rotate(-2deg) skew(0, 0) translate(0%, -5px);
+    -o-transform: rotate(-2deg) skew(0, 0) translate(0%, -5px);
+    transform: rotate(-2deg) skew(0, 0) translate(0%, -5px);
+  }
+
+  .left-shadow {
+    width: 140px;
+    height: 140px;
+    bottom: -5px;
+    left: -12px;
+    position: absolute;
+    z-index: -6;
+    display: inline-block;
+    -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
+    -moz-transform: scale(1) rotate(274deg) translate(20px, 25px)
+      skew(9deg, 0deg);
+    -webkit-transform: scale(1) rotate(274deg) translate(20px, 25px)
+      skew(9deg, 0deg);
+    -o-transform: scale(1) rotate(274deg) translate(20px, 25px) skew(9deg, 0deg);
+    -ms-transform: scale(1) rotate(274deg) translate(20px, 25px)
+      skew(9deg, 0deg);
+    transform: scale(1) rotate(274deg) translate(20px, 25px) skew(9deg, 0deg);
+  }
+  .right-shadow {
+    width: 140px;
+    height: 140px;
+    bottom: -13px;
+    right: -4px;
+    position: absolute;
+    z-index: -6;
+    display: inline-block;
+    -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
+    -moz-transform: scale(1) rotate(184deg) translate(20px, 25px)
+      skew(9deg, 0deg);
+    -webkit-transform: scale(1) rotate(184deg) translate(20px, 25px)
+      skew(9deg, 0deg);
+    -o-transform: scale(1) rotate(184deg) translate(20px, 25px) skew(9deg, 0deg);
+    -ms-transform: scale(1) rotate(184deg) translate(20px, 25px)
+      skew(9deg, 0deg);
+    transform: scale(1) rotate(184deg) translate(20px, 25px) skew(9deg, 0deg);
   }
 }

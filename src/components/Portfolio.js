@@ -7,49 +7,60 @@ export default class Portfolio extends Component {
         <div className="board-wrapper">
           <div className="frame-outer">
             <div className="frame-inner">
-              <div className="title-sticky">
-                <h3 className="title">Projects I've Worked On</h3>
+              <div className="title-box">
+                {/* flex-box */}
+                <div className="title-sticky">
+                  <h3>Projects I've Worked On</h3>
+                  <div className="project-filters">
+                    {/* replace with map - dynamically render */}
+                    <button className="filter">tech1</button>
+                    <button className="filter">tech2</button>
+                    <button className="filter">tech3</button>
+                  </div>
+                </div>
               </div>
-              <ul>
+
+              <ul className="projects">
+                {/* flex-box */}
                 <li>
                   <a href="#">
-                    <h2>Title #1</h2>
-                    <p>Buying a CAR!</p>
+                    <h2>#1</h2>
+                    <p>Front-end Project</p>
                   </a>
                 </li>
 
                 <li>
                   <a href="#">
-                    <h2>Title #2</h2>
-                    <p>Going on a TREK :)</p>
+                    <h2> #2</h2>
+                    <p>Movie DB - React</p>
                   </a>
                 </li>
 
                 <li>
                   <a href="#">
-                    <h2>Title #3</h2>
-                    <p>MONEY</p>
+                    <h2> #3</h2>
+                    <p>Scorekeeper</p>
                   </a>
                 </li>
 
                 <li>
                   <a href="#">
-                    <h2>Title #4</h2>
-                    <p>happiness, joy, contentment</p>
+                    <h2> #4</h2>
+                    <p>Vidly</p>
                   </a>
                 </li>
 
                 <li>
                   <a href="#">
-                    <h2>Title #5</h2>
-                    <p>Family, Friends</p>
+                    <h2> #5</h2>
+                    <p>Other</p>
                   </a>
                 </li>
 
                 <li>
                   <a href="#">
-                    <h2>Title #6</h2>
-                    <p>Health</p>
+                    <h2> #6</h2>
+                    <p>lorem</p>
                   </a>
                 </li>
               </ul>
