@@ -23,23 +23,38 @@ export default class Landing extends Component {
             </div>
           </div>
           <div id="landing-right" className="col">
-            {/* <div className="board-wrapper">
-              <img src={board} className="img" />
-            </div>
-            <div className="content">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
-                quas rem iste delectus recusandae, mollitia consequuntur maiores
-                earum optio. Quasi commodi laborum soluta, aliquid libero
-                doloremque nam obcaecati veritatis repudiandae.
-              </p>
-            </div> */}
             <div className="board-wrapper">
               <div className="frame-outer">
                 <div className="frame-inner">
-                  <div className="sticky">
+                  {/* <div className="sticky">
                     <h3 className="sticky-text">this is sticky #1!</h3>
-                  </div>
+                  </div> */}
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <h2>Title #1</h2>
+                        <p>Text Content #1</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <h2>Title #2</h2>
+                        <p>Text Content #2</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <h2>Title #3</h2>
+                        <p>Text Content #3</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <h2>Title #4</h2>
+                        <p>Text Content #4</p>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

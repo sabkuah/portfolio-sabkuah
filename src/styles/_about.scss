@@ -35,13 +35,15 @@
   }
 
   .title-sticky {
-    background-color: violet;
+    background-color: $body-bg-color;
     height: 15%;
     width: 30%;
     margin-top: 2%;
-    align-items: center;
     z-index: 1;
-    position: relative;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .sticky-text {
@@ -51,5 +53,22 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+  }
+
+  .sticky {
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+
+    li {
+    }
+
+    .sub-list {
+      color: $brand-color;
+      font-style: italic;
+      font-size: smaller;
+    }
   }
 }
