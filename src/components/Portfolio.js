@@ -1,6 +1,30 @@
 import React, { Component } from "react";
+import { getProjects } from "../data/ProjectData";
+import PortfolioProject from "./Portfolio-project";
+
+function createProject(project) {
+  return (
+    <PortfolioProject
+      key={project.id}
+      name={project.name}
+      img={project.img}
+      desc={project.desc}
+      tech={project.tech}
+      link={project.link}
+    />
+  );
+}
 
 export default class Portfolio extends Component {
+  state = {
+    projects: [],
+    technologies: [],
+  };
+
+  componentDidMount() {
+    this.setState({ projects: getProjects() });
+  }
+
   render() {
     return (
       <div className="portfolio-page">
@@ -11,58 +35,16 @@ export default class Portfolio extends Component {
                 {/* flex-box */}
                 <div className="title-sticky">
                   <h3>Projects I've Worked On</h3>
-                  <div className="project-filters">
-                    {/* replace with map - dynamically render */}
-                    <button className="filter">tech1</button>
-                    <button className="filter">tech2</button>
-                    <button className="filter">tech3</button>
-                  </div>
+                  {/* <TechFilter
+                    items={this.state.technologies}
+                    onFilterSelect={this.handleFilterSelect}
+                  /> */}
                 </div>
               </div>
 
               <ul className="projects">
                 {/* flex-box */}
-                <li>
-                  <a href="#">
-                    <h2>#1</h2>
-                    <p>Front-end Project</p>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <h2> #2</h2>
-                    <p>Movie DB - React</p>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <h2> #3</h2>
-                    <p>Scorekeeper</p>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <h2> #4</h2>
-                    <p>Vidly</p>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <h2> #5</h2>
-                    <p>Other</p>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <h2> #6</h2>
-                    <p>lorem</p>
-                  </a>
-                </li>
+                {this.state.projects.map(createProject)}
               </ul>
             </div>
           </div>

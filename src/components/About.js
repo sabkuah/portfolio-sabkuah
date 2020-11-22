@@ -33,9 +33,11 @@ export default function About() {
       <div className="board-wrapper">
         <div className="frame-outer">
           <div className="frame-inner">
-            <div className="row">
-              <div className="title-sticky col-5">
-                <h3 className="title">A Little Bit About Me</h3>
+            <div className="title-box">
+              {/* flex-box */}
+              <div className="title-sticky">
+                <h3>A Little About Me</h3>
+                <p>hello!</p>
               </div>
             </div>
             <div className="row">
