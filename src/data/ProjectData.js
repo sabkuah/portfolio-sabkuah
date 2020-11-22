@@ -1,9 +1,7 @@
-import test from "../images/cork.png";
-
 const projects = [
   {
     id: 1,
-    img: "../images/suki.gif",
+    img: "suki.gif",
     name: "Suki Online Store",
     desc:
       "A snowboard e-commerce site with a shopping cart and checkout. Collaboration using Github and Slack.",
@@ -32,4 +30,16 @@ const projects = [
 
 export function getProjects() {
   return projects;
+}
+
+export function getTechnologies() {
+  var technologies = [];
+
+  projects.forEach((p) => {
+    p.tech.forEach((t) => {
+      technologies.push(t);
+    });
+  });
+
+  return Array.from(new Set(technologies));
 }

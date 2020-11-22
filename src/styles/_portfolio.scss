@@ -60,11 +60,12 @@
     .project-filters {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-evenly;
     }
 
-    .filter {
+    .filter-btn {
       @include brand-button;
+      margin: 0;
     }
   }
 }

@@ -101,7 +101,7 @@ ul li {
 ul li h2 {
   font-size: 140%;
   font-weight: bold;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   font-family: $body-font;
 }
 
@@ -117,4 +117,16 @@ ul li h4 {
   border-radius: 2rem;
   padding: 1.5%;
   width: fit-content;
+  margin: 2%;
+}
+
+ul li img {
+  max-height: 200px;
+  max-width: 250px;
+  padding-bottom: 2%;
+}
+
+.techList {
+  display: flex;
+  justify-content: center;
 }

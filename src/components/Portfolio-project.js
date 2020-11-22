@@ -8,7 +8,11 @@ export default class PortfolioProject extends Component {
         <a href={link}>
           <h2>{name}</h2>
           <img src={img} alt={name} />
-          <h4>{tech}</h4>
+          <div className="techList">
+            {tech.map((t) => {
+              return <h4>{t}</h4>;
+            })}
+          </div>
           <p>{desc}</p>
         </a>
       </li>

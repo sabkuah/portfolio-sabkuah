@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getProjects } from "../data/ProjectData";
+import { getProjects, getTechnologies } from "../data/ProjectData";
 import PortfolioProject from "./Portfolio-project";
 
 function createProject(project) {
@@ -35,6 +35,11 @@ export default class Portfolio extends Component {
                 {/* flex-box */}
                 <div className="title-sticky">
                   <h3>Projects I've Worked On</h3>
+                  <div className="project-filters">
+                    {getTechnologies().map((t) => (
+                      <button className="filter-btn">{t}</button>
+                    ))}
+                  </div>
                   {/* <TechFilter
                     items={this.state.technologies}
                     onFilterSelect={this.handleFilterSelect}
