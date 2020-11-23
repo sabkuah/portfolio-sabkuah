@@ -23,7 +23,9 @@ export default class Portfolio extends Component {
   };
 
   componentDidMount() {
-    this.setState({ projects: getProjects(), technologies: getTechnologies() });
+    const technologies = ["Show All", ...getTechnologies()];
+
+    this.setState({ projects: getProjects(), technologies });
   }
 
   handleFilterSelect = (filter) => {
@@ -33,9 +35,10 @@ export default class Portfolio extends Component {
   render() {
     const { selectedFilter, projects } = this.state;
 
-    const filteredProjects = selectedFilter
-      ? projects.filter((p) => p.tech.includes(selectedFilter))
-      : projects;
+    const filteredProjects =
+      selectedFilter && selectedFilter !== "Show All"
+        ? projects.filter((p) => p.tech.includes(selectedFilter))
+        : projects;
 
     return (
       <div className="portfolio-page">
