@@ -1,17 +1,16 @@
 import React from "react";
 
 const TechFilter = (props) => {
-  const { projects } = props;
+  const { technologies, onFilterSelect, selectedFilter } = props;
 
-  return null;
-  // <div className="project-filters">
-  //   {projects.map((project) => (
-  //     <button className="filter" key={project.id}>
-  //       {" "}
-  //       {project.tech}{" "}
-  //     </button>
-  //   ))}
-  // </div>
+  return technologies.map((t) => (
+    <li
+      onClick={() => onFilterSelect(t)}
+      className={t === selectedFilter ? "filter-btn-active" : "filter-btn"}
+    >
+      {t}
+    </li>
+  ));
 };
 
 export default TechFilter;

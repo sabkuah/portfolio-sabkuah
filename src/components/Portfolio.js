@@ -26,7 +26,17 @@ export default class Portfolio extends Component {
     this.setState({ projects: getProjects(), technologies: getTechnologies() });
   }
 
+  handleFilterSelect = (filter) => {
+    this.setState({ selectedFilter: filter });
+  };
+
   render() {
+    const { selectedFilter, projects } = this.state;
+
+    const filteredProjects = selectedFilter
+      ? projects.filter((p) => p.tech.includes(selectedFilter))
+      : projects;
+
     return (
       <div className="portfolio-page">
         <div className="board-wrapper">
@@ -37,20 +47,21 @@ export default class Portfolio extends Component {
                 <div className="title-sticky">
                   <h3>Projects I've Worked On</h3>
                   <div className="project-filters">
-                    {getTechnologies().map((t) => (
+                    {/* {getTechnologies().map((t) => (
                       <button className="filter-btn">{t}</button>
-                    ))}
+                    ))} */}
+                    <TechFilter
+                      technologies={this.state.technologies}
+                      onFilterSelect={this.handleFilterSelect}
+                      selectedFilter={this.state.selectedFilter}
+                    />
                   </div>
-                  <TechFilter
-                    items={this.state.technologies}
-                    onFilterSelect={this.handleFilterSelect}
-                  />
                 </div>
               </div>
 
               <ul className="projects">
                 {/* flex-box */}
-                {this.state.projects.map(createProject)}
+                {filteredProjects.map(createProject)}
               </ul>
             </div>
           </div>
