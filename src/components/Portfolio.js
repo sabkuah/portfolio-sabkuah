@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getProjects, getTechnologies } from "../data/ProjectData";
 import PortfolioProject from "./Portfolio-project";
+import TechFilter from "./TechFilter";
 
 function createProject(project) {
   return (
@@ -22,7 +23,7 @@ export default class Portfolio extends Component {
   };
 
   componentDidMount() {
-    this.setState({ projects: getProjects() });
+    this.setState({ projects: getProjects(), technologies: getTechnologies() });
   }
 
   render() {
@@ -40,10 +41,10 @@ export default class Portfolio extends Component {
                       <button className="filter-btn">{t}</button>
                     ))}
                   </div>
-                  {/* <TechFilter
+                  <TechFilter
                     items={this.state.technologies}
                     onFilterSelect={this.handleFilterSelect}
-                  /> */}
+                  />
                 </div>
               </div>
 
