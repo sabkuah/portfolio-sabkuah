@@ -8,21 +8,21 @@ export default class Landing extends Component {
     return (
       <div className="landing container-fluid">
         <div className="row">
-          <div id="landing-left" className="col">
+          <div id="landing-left" className="col-sm-12 col-md-6">
             <div id="welcome">
               <h1>Hi, I am Sabrina Kuah</h1>
               <p>Full-Stack Web Developer, Educator</p>
               <div className="row" id="landing-buttons">
                 <Link to="/portfolio">
-                  <Button variant="contained">See Portfolio</Button>
+                  <li className="l-btn">See Portfolio</li>
                 </Link>
                 <Link to="/about">
-                  <Button variant="contained">About Me</Button>
+                  <button className="l-btn">About Me</button>
                 </Link>
               </div>
             </div>
           </div>
-          <div id="landing-right" className="col">
+          <div id="landing-right" className="col-sm-12 col-md-6">
             <div className="board-wrapper">
               <div className="frame-outer">
                 <div className="frame-inner">

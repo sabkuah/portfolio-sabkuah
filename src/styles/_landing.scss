@@ -12,8 +12,12 @@
     justify-content: center;
   }
 
-  Button {
+  .l-btn {
     @include brand-button;
+  }
+
+  .l-btn:hover {
+    background-color: $hover-color;
   }
 
   #landing-left {
@@ -61,25 +65,43 @@
     z-index: -1;
   }
 
-  // .sticky {
-  //   background-color: violet;
-  //   width: 220px;
-  //   height: 200px;
-  //   z-index: 1;
-  //   position: relative;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  // }
+  @media only screen and(min-width: 768px) {
+    .frame-outer {
+      height: 100%;
+      width: 100%;
+    }
 
-  // .sticky-text {
-  //   color: black;
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   z-index: 2;
-  // }
+    .frame-inner {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  @media only screen and(min-width: 375px) {
+    #landing-left {
+      position: relative;
+      //height: calc(92vh - 56px);
+    }
+
+    #welcome {
+      // position: absolute;
+      // top: 40%;
+      // width: 100%;
+      align-content: center;
+    }
+
+    .frame-outer {
+      height: fit-content;
+      width: 100%;
+    }
+
+    .frame-inner {
+      height: fit-content;
+      width: 100%;
+    }
+  }
+
+  //Sticky Notes:
 
   * {
     margin: 0;
