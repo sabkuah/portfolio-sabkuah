@@ -4,12 +4,12 @@ const TechFilter = (props) => {
   const { technologies, onFilterSelect, selectedFilter } = props;
 
   return technologies.map((t) => (
-    <li
+    <button
       onClick={() => onFilterSelect(t)}
       className={t === selectedFilter ? "filter-btn-active" : "filter-btn"}
     >
       {t}
-    </li>
+    </button>
   ));
 };
 

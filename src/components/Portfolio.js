@@ -46,13 +46,9 @@ export default class Portfolio extends Component {
           <div className="frame-outer">
             <div className="frame-inner">
               <div className="title-box">
-                {/* flex-box */}
                 <div className="title-sticky">
                   <h3>Projects I've Worked On</h3>
                   <div className="project-filters">
-                    {/* {getTechnologies().map((t) => (
-                      <button className="filter-btn">{t}</button>
-                    ))} */}
                     <TechFilter
                       technologies={this.state.technologies}
                       onFilterSelect={this.handleFilterSelect}

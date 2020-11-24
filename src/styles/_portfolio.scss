@@ -94,10 +94,19 @@
       margin: 1%;
     }
 
+    .filter-btn:hover {
+      background-color: #4a777a;
+    }
+
+    .filter-btn:focus {
+      outline: none;
+    }
+
     .filter-btn-active {
       @include brand-button;
       margin: 1%;
       background-color: #4a777a;
+      outline: none;
     }
   }
 }
