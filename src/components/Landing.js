@@ -6,7 +6,7 @@ import board from "../images/3.png";
 export default class Landing extends Component {
   render() {
     return (
-      <div className="landing container-fluid">
+      <div className="landing">
         <div id="landing-message">
           <div id="welcome">
             <h1>Hi, I am Sabrina Kuah</h1>

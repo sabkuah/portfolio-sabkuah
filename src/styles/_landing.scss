@@ -1,5 +1,5 @@
 .landing {
-  height: 100%;
+  height: 100vh;
   font-family: $body-font;
   // background-image: linear-gradient(to right, white, #f5f5f5);
 
@@ -65,19 +65,7 @@
     z-index: -1;
   }
 
-  // @media only screen and(min-width: 768px) {
-  //   .frame-outer {
-  //     height: 100%;
-  //     width: 100%;
-  //   }
-
-  //   .frame-inner {
-  //     height: 100%;
-  //     width: 100%;
-  //   }
-  // }
-
-  @media only screen and(min-width: 375px) {
+  @media only screen and(max-width: 768px) {
     #landing-message {
       //position: relative;
       height: 30vh;
@@ -85,6 +73,74 @@
 
       #welcome {
         //align-content: center;
+        height: 100%;
+
+        h1 {
+          font-size: 33px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+
+        #landing-buttons {
+          margin-top: 1%;
+
+          .l-btn {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    #landing-board {
+      .board-wrapper {
+        height: 60vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+      }
+
+      .frame-outer {
+        margin-top: 2%;
+        height: 100%;
+        width: 90%;
+        border: 5px solid #a9a9b0;
+      }
+
+      .frame-inner {
+        height: 100%;
+        width: 100%;
+        border: 14px solid #333;
+      }
+
+      #s3,
+      #s4 {
+        display: none;
+      }
+
+      ul li a {
+        height: 12em;
+        width: 12em;
+      }
+
+      ul li {
+        h2 {
+          font-size: 22px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  @media only screen and(max-width: 375px) {
+    #landing-message {
+      height: 30vh;
+
+      #welcome {
         height: 100%;
 
         h1 {
@@ -108,7 +164,7 @@
     #landing-board {
       .board-wrapper {
         height: 60vh;
-        width: 92vw;
+        width: 100vw;
         display: flex;
         justify-content: center;
       }
@@ -116,7 +172,7 @@
       .frame-outer {
         margin-top: 2%;
         height: 100%;
-        width: 100%;
+        width: 92%;
         border: 3px solid #a9a9b0;
       }
 
