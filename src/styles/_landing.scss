@@ -20,7 +20,7 @@
     background-color: $hover-color;
   }
 
-  #landing-left {
+  #landing-message {
     position: relative;
     height: calc(92vh - 56px);
   }
@@ -33,7 +33,7 @@
   }
 
   //Right Welcome
-  #landing-right {
+  #landing-board {
     width: 50vw;
     height: calc(92vh - 56px);
     position: relative;
@@ -65,39 +65,86 @@
     z-index: -1;
   }
 
-  @media only screen and(min-width: 768px) {
-    .frame-outer {
-      height: 100%;
-      width: 100%;
-    }
+  // @media only screen and(min-width: 768px) {
+  //   .frame-outer {
+  //     height: 100%;
+  //     width: 100%;
+  //   }
 
-    .frame-inner {
-      height: 100%;
-      width: 100%;
-    }
-  }
+  //   .frame-inner {
+  //     height: 100%;
+  //     width: 100%;
+  //   }
+  // }
 
   @media only screen and(min-width: 375px) {
-    #landing-left {
-      position: relative;
-      //height: calc(92vh - 56px);
+    #landing-message {
+      //position: relative;
+      height: 30vh;
+      //justify-content: center;
+
+      #welcome {
+        //align-content: center;
+        height: 100%;
+
+        h1 {
+          font-size: 28px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        #landing-buttons {
+          margin-top: 1%;
+
+          .l-btn {
+            font-size: 14px;
+          }
+        }
+      }
     }
 
-    #welcome {
-      // position: absolute;
-      // top: 40%;
-      // width: 100%;
-      align-content: center;
-    }
+    #landing-board {
+      .board-wrapper {
+        height: 60vh;
+        width: 92vw;
+        display: flex;
+        justify-content: center;
+      }
 
-    .frame-outer {
-      height: fit-content;
-      width: 100%;
-    }
+      .frame-outer {
+        margin-top: 2%;
+        height: 100%;
+        width: 100%;
+        border: 3px solid #a9a9b0;
+      }
 
-    .frame-inner {
-      height: fit-content;
-      width: 100%;
+      .frame-inner {
+        height: 100%;
+        width: 100%;
+        border: 10px solid #333;
+      }
+
+      #s3,
+      #s4 {
+        display: none;
+      }
+
+      ul li a {
+        height: 7em;
+        width: 7em;
+      }
+
+      ul li {
+        h2 {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
     }
   }
 
