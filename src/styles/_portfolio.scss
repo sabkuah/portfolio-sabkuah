@@ -3,14 +3,9 @@
   width: 100vw;
   height: calc(92vh - 56px);
   position: relative;
-  //margin-top: 10%;
 
   .board-wrapper {
-    // height: 100%;
-    // width: 100%;
-    // //position: absolute;
-    // top: 0;
-    // left: 0;
+    height: calc(92vh - 56px);
     display: flex;
     justify-content: center;
   }
@@ -22,45 +17,14 @@
     box-shadow: 20px 20px 50px grey;
     border-radius: 2rem;
     background-color: #98989c;
-    //position: absolute;
-    // top: 50%;
-    // left: 50%;
-    //transform: translate(-50%, -50%);
   }
 
   .frame-inner {
-    width: 100%;
-    height: fit-content;
+    height: 100%;
     border: 20px solid #333;
     border-radius: 2rem;
     background-image: url(../images/cork.png);
-    z-index: -1;
-    //display: flex;
   }
-
-  // @media only screen and(min-width: 768px) {
-  //   .frame-outer {
-  //     height: 100%;
-  //     width: 100%;
-  //   }
-
-  //   .frame-inner {
-  //     height: 100%;
-  //     width: 100%;
-  //   }
-  // }
-
-  // @media only screen and(min-width: 300px) {
-  //   .frame-outer {
-  //     height: fit-content;
-  //     width: 100%;
-  //   }
-
-  //   .frame-inner {
-  //     height: fit-content;
-  //     width: 100%;
-  //   }
-  // }
 
   .title-box {
     display: flex;

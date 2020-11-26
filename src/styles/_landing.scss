@@ -1,35 +1,36 @@
 .landing {
-  height: 100vh;
+  height: calc(92vh - 56px);
   font-family: $body-font;
+  display: flex;
   // background-image: linear-gradient(to right, white, #f5f5f5);
 
   //Left Welcome
-  p {
-    color: $brand-color;
-  }
-
-  #landing-buttons {
-    justify-content: center;
-  }
-
-  .l-btn {
-    @include brand-button;
-  }
-
-  .l-btn:hover {
-    background-color: $hover-color;
-  }
-
   #landing-message {
-    position: relative;
-    height: calc(92vh - 56px);
-  }
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 
-  #welcome {
-    position: absolute;
-    top: 40%;
-    width: 100%;
-    align-content: center;
+    #welcome {
+      position: absolute;
+      top: 40%;
+
+      p {
+        color: $brand-color;
+      }
+
+      #landing-buttons {
+        justify-content: center;
+      }
+
+      .l-btn {
+        @include brand-button;
+      }
+
+      .l-btn:hover {
+        background-color: $hover-color;
+      }
+    }
   }
 
   //Right Welcome
@@ -37,32 +38,32 @@
     width: 50vw;
     height: calc(92vh - 56px);
     position: relative;
-  }
 
-  .board-wrapper {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+    .board-wrapper {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
-  .frame-outer {
-    border: 6px solid #a9a9b0;
-    width: 92%;
-    height: 100%;
-    box-shadow: 20px 20px 50px grey;
-    border-radius: 2rem;
-    background-color: #98989c;
-  }
+    .frame-outer {
+      border: 6px solid #a9a9b0;
+      width: 92%;
+      height: 100%;
+      box-shadow: 20px 20px 50px grey;
+      border-radius: 2rem;
+      background-color: #98989c;
+    }
 
-  .frame-inner {
-    width: 100%;
-    height: 100%;
-    border: 20px solid #333;
-    border-radius: 2rem;
-    background-image: url(../images/cork.png);
-    z-index: -1;
+    .frame-inner {
+      width: 100%;
+      height: 100%;
+      border: 20px solid #333;
+      border-radius: 2rem;
+      background-image: url(../images/cork.png);
+      z-index: -1;
+    }
   }
 
   @media only screen and(max-width: 768px) {

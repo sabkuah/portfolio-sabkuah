@@ -5,6 +5,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import Note from "./common/Note";
 
 const useStyles = makeStyles({
   root: {
@@ -81,25 +82,7 @@ export default function About() {
                 </Card>
               </div>
               <div className="biography container">
-                <div class="paper">
-                  <div class="tape"></div>
-                  <div class="red-line first"></div>
-                  <div class="red-line"></div>
-                  <ul id="lines">
-                    <li></li>
-                    <li>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Porro dolorem ipsum doloremque
-                    </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ul>
-                  <div class="left-shadow"></div>
-                  <div class="right-shadow"></div>
-                </div>
+                {/* <Note text="hello" /> */}
               </div>
             </div>
           </div>

@@ -75,51 +75,8 @@
 
 .biography {
   .container {
-    width: 500px;
+    width: 100%;
     margin: 0 auto;
     padding-top: 200px;
-  }
-  .paper {
-    position: relative;
-    width: 500px;
-    height: 250px;
-    background-color: #faf8e5;
-    border: 1px solid #e3e3e3;
-  }
-  .red-line {
-    height: 250px;
-    width: 1px;
-    background-color: #ef8b8b;
-    float: left;
-    margin-left: 4px;
-  }
-  .first {
-    margin-left: 40px;
-  }
-  ul#lines {
-    margin-top: 40px;
-  }
-  ul#lines li {
-    height: 28px;
-    line-height: 28px;
-    color: #4d84c8;
-    font-family: Georgia;
-    font-style: italic;
-    font-size: 16px;
-    width: 460px;
-    border-top: 1px solid #f2f0df;
-    padding-left: 75px;
-  }
-
-  .tape {
-    position: absolute;
-    top: -15px;
-    right: 185px;
-    width: 130px;
-    height: 35px;
-    background-color: #fff;
-    opacity: 0.6;
-    // border-left: 1px dashed rgba(0, 0, 0, 0.1);
-    // border-right: 1px dashed rgba(0, 0, 0, 0.1);
   }
 }
