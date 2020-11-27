@@ -1,33 +1,35 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
 import Note from "./common/Note";
 
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-    width: 500,
-  },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-});
+import { makeStyles } from "@material-ui/core/styles";
+
+// import Card from "@material-ui/core/Card";
+// import CardActions from "@material-ui/core/CardActions";
+// import CardContent from "@material-ui/core/CardContent";
+// import Button from "@material-ui/core/Button";
+// import Typography from "@material-ui/core/Typography";
+
+// const useStyles = makeStyles({
+//   root: {
+//     minWidth: 275,
+//     width: 500,
+//   },
+//   bullet: {
+//     display: "inline-block",
+//     margin: "0 2px",
+//     transform: "scale(0.8)",
+//   },
+//   title: {
+//     fontSize: 14,
+//   },
+//   pos: {
+//     marginBottom: 12,
+//   },
+// });
 
 export default function About() {
-  const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
+  //const classes = useStyles();
+  //const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <div className="about-page">
@@ -41,49 +43,50 @@ export default function About() {
                 <p>hello!</p>
               </div>
             </div>
-            <div className="row">
-              <div className="education">
-                <Card className={classes.root} variant="outlined">
-                  <CardContent>
-                    <Typography
-                      className={classes.title}
-                      color="textSecondary"
-                      gutterBottom
-                    >
-                      Word of the Day
-                    </Typography>
-                    <Typography variant="h5" component="h2">
-                      EDU{bull}CA{bull}TION
-                    </Typography>
-                    <Typography className={classes.pos} color="textSecondary">
-                      noun
-                    </Typography>
-                    <Typography variant="body2" component="p">
-                      {/* well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'} */}
-                      <ul>
-                        <li>
-                          Software Systems Developer - Web-Programming Option
-                        </li>
-                        <li className="sub-list">BCIT</li>
-                        <li>Master of Teaching</li>
-                        <li className="sub-list">University of Toronto</li>
-                        <li>Bachelor of Science in Cell Biology</li>
-                        <li className="sub-list">
-                          University of British Columbia
-                        </li>
-                      </ul>
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small">Learn More</Button>
-                  </CardActions>
-                </Card>
+            <div className="about-content">
+              <Note
+                title="Sabrina Kuah"
+                text="I am currently completing the SSD program at BCIT."
+              />
+
+              <div className="polaroid-container">
+                <div className="polaroid" id="card-1">
+                  <div className="photo-container">
+                    <img src="shrek.png" className="photo"></img>
+                  </div>
+                  <div className="caption">
+                    <p>this is card 1</p>
+                  </div>
+                </div>
+
+                <div className="polaroid" id="card-2">
+                  <div className="photo-container">
+                    <img src="shrek.png" className="photo"></img>
+                  </div>
+                  <div className="caption">
+                    <p>this is card 2</p>
+                  </div>
+                </div>
+
+                <div className="polaroid" id="card-3">
+                  <div className="photo-container">
+                    <img src="shrek.png" className="photo"></img>
+                  </div>
+                  <div className="caption">
+                    <p>this is card 3</p>
+                  </div>
+                </div>
+
+                <div className="polaroid" id="card-4">
+                  <div className="photo-container">
+                    <img src="shrek.png" className="photo"></img>
+                  </div>
+                  <div className="caption">
+                    <p>this is card 4</p>
+                  </div>
+                </div>
               </div>
-              <div className="biography container">
-                {/* <Note text="hello" /> */}
-              </div>
+              <Note title="Skills" text="none! :( " />
             </div>
           </div>
         </div>
