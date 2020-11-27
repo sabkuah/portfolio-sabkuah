@@ -25,10 +25,7 @@ export default class Landing extends Component {
           <div className="board-wrapper">
             <div className="frame-outer">
               <div className="frame-inner">
-                {/* <div className="sticky">
-                    <h3 className="sticky-text">this is sticky #1!</h3>
-                  </div> */}
-                <ul>
+                <ul className="stickies">
                   <li id="s1">
                     <a href="#">
                       <h2>Title #1</h2>

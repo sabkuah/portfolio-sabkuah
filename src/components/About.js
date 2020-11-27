@@ -86,7 +86,74 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <Note title="Skills" text="none! :( " />
+              <ul id="about-stickies">
+                <li id="education">
+                  <a href="#">
+                    <h2>Education</h2>
+                    <ul>
+                      <li>Software Systems Developer Certificate</li>
+                      <p>BCIT (May 2021)</p>
+                      <li>Master of Teaching</li>
+                      <p>University of Toronto (2017)</p>
+                      <li>Bachelor of Science in Biology</li>
+                      <p>University of British Columbia (2014)</p>
+                    </ul>
+                  </a>
+                </li>
+                <li id="languages">
+                  <a href="#">
+                    <h2>Technologies</h2>
+                    <ul>
+                      <li>HTML/CSS/SCSS</li>
+                      <li>React/Javascript</li>
+                      <li>MSSQL</li>
+                      <li>C# / ASP.NET</li>
+                    </ul>
+                  </a>
+                </li>
+                <li id="skills">
+                  <a href="#">
+                    <h2>Skills</h2>
+                    <ul>
+                      <li>Git Version Control</li>
+                      <li>Slack Collaboration</li>
+                      <li>Kanban Project Boards</li>
+                      <li>Agile Development</li>
+                    </ul>
+                  </a>
+                </li>
+                <li id="knowledge">
+                  <a href="#">
+                    <h2>Tools</h2>
+                    <ul>
+                      <li>Visual Studio Code</li>
+                      <li>MS SQL Server</li>
+                      <li>Figma</li>
+                      <li>Moqups</li>
+                    </ul>
+                  </a>
+                </li>
+                <li id="knowledge">
+                  <a href="#">
+                    <h2>Other Skills</h2>
+                    <ul>
+                      <li>
+                        I worked at the Gap as a sales associate then team lead
+                        for seven years while I was in school.
+                      </li>
+                      <li>I've taught every grade from pre-K to grade 12.</li>
+                      <li>
+                        I worked in biotech and as a researcher at the BC Cancer
+                        Agency.
+                      </li>
+                    </ul>
+                  </a>
+                </li>
+              </ul>
+              <Note
+                title="Life Outside of Work"
+                text="I have a cat named Monkey, I've lived in British Columbia, Alberta, Ontario and South Korea. "
+              />
             </div>
           </div>
         </div>
