@@ -46,6 +46,10 @@
       margin: 2%;
       padding: 2%;
     }
+
+    .about-btns {
+      @include brand-button;
+    }
   }
 
   .about-content {

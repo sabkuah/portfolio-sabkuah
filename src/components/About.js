@@ -1,36 +1,7 @@
 import React from "react";
 import Note from "./common/Note";
 
-import { makeStyles } from "@material-ui/core/styles";
-
-// import Card from "@material-ui/core/Card";
-// import CardActions from "@material-ui/core/CardActions";
-// import CardContent from "@material-ui/core/CardContent";
-// import Button from "@material-ui/core/Button";
-// import Typography from "@material-ui/core/Typography";
-
-// const useStyles = makeStyles({
-//   root: {
-//     minWidth: 275,
-//     width: 500,
-//   },
-//   bullet: {
-//     display: "inline-block",
-//     margin: "0 2px",
-//     transform: "scale(0.8)",
-//   },
-//   title: {
-//     fontSize: 14,
-//   },
-//   pos: {
-//     marginBottom: 12,
-//   },
-// });
-
 export default function About() {
-  //const classes = useStyles();
-  //const bull = <span className={classes.bullet}>•</span>;
-
   return (
     <div className="about-page">
       <div className="board-wrapper">
@@ -40,7 +11,10 @@ export default function About() {
               {/* flex-box */}
               <div className="title-sticky">
                 <h3>A Little About Me</h3>
-                <p>hello!</p>
+                <div className="row justify-content-center">
+                  <button className="about-btns">See Resume</button>
+                  <button className="about-btns">See Portfolio</button>
+                </div>
               </div>
             </div>
             <div className="about-content">
@@ -87,19 +61,6 @@ export default function About() {
                 </div>
               </div>
               <ul id="about-stickies">
-                <li id="education">
-                  <a href="#">
-                    <h2>Education</h2>
-                    <ul>
-                      <li>Software Systems Developer Certificate</li>
-                      <p>BCIT (May 2021)</p>
-                      <li>Master of Teaching</li>
-                      <p>University of Toronto (2017)</p>
-                      <li>Bachelor of Science in Biology</li>
-                      <p>University of British Columbia (2014)</p>
-                    </ul>
-                  </a>
-                </li>
                 <li id="languages">
                   <a href="#">
                     <h2>Technologies</h2>
@@ -133,7 +94,36 @@ export default function About() {
                     </ul>
                   </a>
                 </li>
-                <li id="knowledge">
+              </ul>
+              <Note
+                title="Education"
+                text="<li>Software Systems Developer Certificate</li>
+              <p>BCIT (May 2021)</p>
+              <li>Master of Teaching</li>
+              <p>University of Toronto (2017)</p>
+              <li>Bachelor of Science in Biology</li>
+              <p>University of British Columbia (2014)</p>"
+              />
+              <Note
+                title="Some Other Skills"
+                text="I worked at the Gap as a sales associate then team lead
+                for seven years while I was in school. I've taught every grade from pre-K to grade 12. I worked in biotech and as a researcher at the BC Cancer
+                Agency."
+              />
+              <Note
+                title="Life Outside of Work"
+                text="I have a cat named Monkey, I've lived in British Columbia, Alberta, Ontario and South Korea. "
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+{
+  /* <li id="knowledge">
                   <a href="#">
                     <h2>Other Skills</h2>
                     <ul>
@@ -148,16 +138,21 @@ export default function About() {
                       </li>
                     </ul>
                   </a>
-                </li>
-              </ul>
-              <Note
-                title="Life Outside of Work"
-                text="I have a cat named Monkey, I've lived in British Columbia, Alberta, Ontario and South Korea. "
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+                </li> */
+}
+
+{
+  /* <li id="education">
+                  <a href="#">
+                    <h2>Education</h2>
+                    <ul>
+                      <li>Software Systems Developer Certificate</li>
+                      <p>BCIT (May 2021)</p>
+                      <li>Master of Teaching</li>
+                      <p>University of Toronto (2017)</p>
+                      <li>Bachelor of Science in Biology</li>
+                      <p>University of British Columbia (2014)</p>
+                    </ul>
+                  </a>
+                </li> */
 }
