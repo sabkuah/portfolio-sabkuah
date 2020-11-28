@@ -11,41 +11,15 @@
   }
 
   .frame-outer {
-    border: 6px solid #a9a9b0;
-    width: 92%;
-    height: fit-content;
-    box-shadow: 20px 20px 50px grey;
-    border-radius: 2rem;
-    background-color: #98989c;
+    @include outer-frame-lg;
   }
 
   .frame-inner {
-    height: 100%;
-    border: 20px solid #333;
-    border-radius: 2rem;
-    background-image: url(../images/cork.png);
+    @include inner-frame-lg;
   }
 
   .title-box {
-    display: flex;
-    justify-content: center;
-
-    h3 {
-      padding-bottom: 3%;
-      border-bottom-width: 0.5px;
-      border-bottom-style: solid;
-      border-bottom-color: $brand-color;
-    }
-
-    .title-sticky {
-      background-color: $body-bg-color;
-      font-family: $body-font;
-      font-weight: bold;
-      min-width: 40%;
-      height: fit-content;
-      margin: 2%;
-      padding: 2%;
-    }
+    @include titlebox;
 
     .about-btns {
       @include brand-button;
@@ -65,63 +39,23 @@
   height: 50vmin;
 
   #card-1 {
-    transition: transform 0.35s ease-out;
+    @include polaroid-animation;
     transform: translate(5%, 15%) scale(0.35) rotate(-5deg);
-    will-change: transform;
-
-    &:hover {
-      transform: scale(1) rotate(0deg);
-      z-index: 1;
-
-      &:before {
-        opacity: 1;
-      }
-    }
   }
 
   #card-2 {
-    transition: transform 0.35s ease-out;
+    @include polaroid-animation;
     transform: translate(-10%, -20%) scale(0.35) rotate(-1deg);
-    will-change: transform;
-
-    &:hover {
-      transform: scale(1) rotate(0deg);
-      z-index: 1;
-
-      &:before {
-        opacity: 1;
-      }
-    }
   }
 
   #card-3 {
-    transition: transform 0.35s ease-out;
+    @include polaroid-animation;
     transform: translate(-20%, 5%) scale(0.35) rotate(-4deg);
-    will-change: transform;
-
-    &:hover {
-      transform: scale(1) rotate(0deg);
-      z-index: 1;
-
-      &:before {
-        opacity: 1;
-      }
-    }
   }
 
   #card-4 {
-    transition: transform 0.35s ease-out;
+    @include polaroid-animation;
     transform: translate(10%, -7%) scale(0.35) rotate(7deg);
-    will-change: transform;
-
-    &:hover {
-      transform: scale(1) rotate(0deg);
-      z-index: 1;
-
-      &:before {
-        opacity: 1;
-      }
-    }
   }
 
   .polaroid {
@@ -161,94 +95,4 @@
     opacity: 0.75;
     text-align: center;
   }
-}
-
-//Sticky Notes
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-h2,
-p {
-  font-size: 100%;
-}
-
-ul,
-li {
-  list-style: none;
-  font-family: $body-font;
-  font-size: 100%;
-}
-
-ul {
-  overflow: hidden;
-  padding: 1%;
-}
-
-ul li a {
-  text-decoration: none !important;
-  color: inherit !important;
-  background: #ffc;
-  display: block;
-  width: 20em;
-  height: 20em;
-  padding: 1em;
-
-  /*give the notes a shadow*/
-  -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
-  -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
-  -o-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
-
-  /*give the tilt effect to your sticky notes*/
-  -webkit-transform: rotate(-6deg);
-  -moz-transform: rotate(-6deg);
-  -o-transform: rotate(-6deg);
-
-  /*apply some smooth transition to the sticky note*/
-  -webkit-transition: -webkit-transform 0.15s linear;
-  -moz-transition: -moz-transform 0.15s linear;
-  -o-transition: -o-transform 0.15s linear;
-}
-
-ul li:nth-child(even) a {
-  -webkit-transform: rotate(4deg);
-  -moz-transform: rotate(4deg);
-  -o-transform: rotate(4deg);
-  position: relative;
-  top: 5px;
-  background: mistyrose;
-}
-
-ul li:nth-child(3n) a {
-  -webkit-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
-  -o-transform: rotate(-3deg);
-  position: relative;
-  top: -5px;
-  background: skyblue;
-}
-
-ul li:nth-child(5n) a {
-  -webkit-transform: rotate(5deg);
-  -moz-transform: rotate(5deg);
-  -o-transform: rotate(5deg);
-  position: relative;
-  top: -10px;
-  background: snow;
-}
-
-ul li a:hover,
-ul li a:focus {
-  -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
-  -o-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
-
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -o-transform: scale(1.5);
-
-  position: relative;
-  z-index: 5;
 }

@@ -1,8 +1,8 @@
 .portfolio-page {
-  font: $body-font;
+  //Styling for Corkboard Frame
+  font-family: $body-font;
   width: 100vw;
   height: calc(92vh - 56px);
-  position: relative;
 
   .board-wrapper {
     height: calc(92vh - 56px);
@@ -11,41 +11,16 @@
   }
 
   .frame-outer {
-    border: 6px solid #a9a9b0;
-    width: 92%;
-    height: fit-content;
-    box-shadow: 20px 20px 50px grey;
-    border-radius: 2rem;
-    background-color: #98989c;
+    @include outer-frame-lg;
   }
 
   .frame-inner {
-    height: 100%;
-    border: 20px solid #333;
-    border-radius: 2rem;
-    background-image: url(../images/cork.png);
+    @include inner-frame-lg;
   }
 
+  //Styling for Content Box and Filtering Title
   .title-box {
-    display: flex;
-    justify-content: center;
-
-    h3 {
-      padding-bottom: 3%;
-      border-bottom-width: 0.5px;
-      border-bottom-style: solid;
-      border-bottom-color: $brand-color;
-    }
-
-    .title-sticky {
-      background-color: $body-bg-color;
-      font-family: $body-font;
-      font-weight: bold;
-      max-width: 40%;
-      height: fit-content;
-      margin: 2%;
-      padding: 2%;
-    }
+    @include titlebox;
 
     .project-filters {
       display: flex;
@@ -71,6 +46,24 @@
       margin: 1%;
       background-color: #4a777a;
       outline: none;
+    }
+  }
+
+  //For Mobile View
+  @media screen and(max-width: 375px) {
+    .frame-outer {
+      @include outer-frame-sm;
+    }
+
+    .frame-inner {
+      @include inner-frame-sm;
+    }
+    .title-sticky {
+      min-width: 85%;
+    }
+
+    .filter-btn {
+      @include brand-button-sm;
     }
   }
 }

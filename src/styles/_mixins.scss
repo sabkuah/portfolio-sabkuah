@@ -1,3 +1,4 @@
+//Brand Buttons
 @mixin brand-button {
   background-color: $brand-color;
   border: none;
@@ -11,4 +12,85 @@
   margin: 20px;
   justify-content: space-around;
   border-radius: 50px;
+}
+
+@mixin brand-button-sm {
+  background-color: $brand-color;
+  //border: none;
+  color: white;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  //display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 20px;
+  justify-content: space-around;
+  border-radius: 50px;
+}
+
+//Corkboard Frames
+@mixin outer-frame-lg {
+  border: 6px solid #a9a9b0;
+  width: 92%;
+  height: fit-content;
+  box-shadow: 20px 20px 50px grey;
+  border-radius: 2rem;
+  background-color: #98989c;
+}
+
+@mixin outer-frame-md {
+}
+
+@mixin outer-frame-sm {
+  border: 3px solid #a9a9b0;
+}
+
+@mixin inner-frame-lg {
+  height: 100%;
+  border: 20px solid #333;
+  border-radius: 2rem;
+  background-image: url(../images/cork.png);
+}
+
+@mixin inner-frame-md {
+}
+
+@mixin inner-frame-sm {
+  border: 10px solid #333;
+}
+
+//Title Stickies
+
+@mixin titlebox {
+  h3 {
+    padding-bottom: 3%;
+    border-bottom: 0.5px solid $brand-color;
+  }
+
+  .title-sticky {
+    background-color: $body-bg-color;
+    font-family: $body-font;
+    font-weight: bold;
+    width: 40%;
+    height: fit-content;
+    margin: 2%;
+    padding: 2%;
+  }
+}
+
+//Polaroid Animations
+
+@mixin polaroid-animation {
+  transition: transform 0.35s ease-out;
+  will-change: transform;
+
+  &:hover {
+    transform: scale(1) rotate(0deg);
+    z-index: 1;
+
+    &:before {
+      opacity: 1;
+    }
+  }
 }

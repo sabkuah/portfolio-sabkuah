@@ -7,7 +7,7 @@ export default function About() {
       <div className="board-wrapper">
         <div className="frame-outer">
           <div className="frame-inner">
-            <div className="title-box">
+            <div className="title-box row justify-content-center">
               {/* flex-box */}
               <div className="title-sticky">
                 <h3>A Little About Me</h3>
@@ -60,41 +60,44 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <ul id="about-stickies">
-                <li id="languages">
-                  <a href="#">
-                    <h2>Technologies</h2>
-                    <ul>
-                      <li>HTML/CSS/SCSS</li>
-                      <li>React/Javascript</li>
-                      <li>MSSQL</li>
-                      <li>C# / ASP.NET</li>
-                    </ul>
-                  </a>
-                </li>
-                <li id="skills">
-                  <a href="#">
-                    <h2>Skills</h2>
-                    <ul>
-                      <li>Git Version Control</li>
-                      <li>Slack Collaboration</li>
-                      <li>Kanban Project Boards</li>
-                      <li>Agile Development</li>
-                    </ul>
-                  </a>
-                </li>
-                <li id="knowledge">
-                  <a href="#">
-                    <h2>Tools</h2>
-                    <ul>
-                      <li>Visual Studio Code</li>
-                      <li>MS SQL Server</li>
-                      <li>Figma</li>
-                      <li>Moqups</li>
-                    </ul>
-                  </a>
-                </li>
-              </ul>
+
+              <div className="stickies">
+                <ul>
+                  <li id="languages">
+                    <a href="#">
+                      <h2>Technologies</h2>
+                      <ul>
+                        <li>HTML/CSS/SCSS</li>
+                        <li>React/Javascript</li>
+                        <li>MSSQL</li>
+                        <li>C# / ASP.NET</li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li id="skills">
+                    <a href="#">
+                      <h2>Skills</h2>
+                      <ul>
+                        <li>Git Version Control</li>
+                        <li>Slack Collaboration</li>
+                        <li>Kanban Project Boards</li>
+                        <li>Agile Development</li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li id="knowledge">
+                    <a href="#">
+                      <h2>Tools</h2>
+                      <ul>
+                        <li>Visual Studio Code</li>
+                        <li>MS SQL Server</li>
+                        <li>Figma</li>
+                        <li>Moqups</li>
+                      </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>
               <Note
                 title="Education"
                 text="<li>Software Systems Developer Certificate</li>

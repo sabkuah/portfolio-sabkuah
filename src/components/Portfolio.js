@@ -46,7 +46,7 @@ export default class Portfolio extends Component {
         <div className="board-wrapper">
           <div className="frame-outer">
             <div className="frame-inner">
-              <div className="title-box">
+              <div className="title-box row justify-content-center">
                 <div className="title-sticky">
                   <h3>Projects I've Worked On</h3>
                   <div className="project-filters">
@@ -59,13 +59,16 @@ export default class Portfolio extends Component {
                 </div>
               </div>
 
-              <ul className="projects">
-                {/* flex-box */}
-                {filteredProjects.map(createProject)}
-              </ul>
+              <div className="stickies">
+                <ul className="projects">
+                  {/* flex-box */}
+                  {filteredProjects.map(createProject)}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+        {/* replace modal code to be dynamically rendered */}
         <div
           class="modal fade"
           id="test"
