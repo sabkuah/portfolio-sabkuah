@@ -1,10 +1,17 @@
 nav {
   background-color: white;
+  padding: 0px;
+
+  .navbar-toggler-icon {
+    color: $brand-color;
+  }
+
   .nav-link {
     font-family: $body-font;
+    font-size: 20px;
     color: $brand-color;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: bolder;
     letter-spacing: 1px;
     margin-right: 10px;
   }
@@ -14,13 +21,21 @@ nav {
     color: $hover-color;
   }
 
-  .social-icons {
-    align-content: flex-end;
-  }
+  // .social-icons {
+  //   align-content: flex-end;
+  // }
 
   .icon {
     color: $brand-color;
-    font-size: larger;
-    margin: 5px;
+    font-size: 20px;
+    margin: 8px;
+  }
+
+  .navbar-toggler-icon {
+    font-size: 40px;
+  }
+
+  .navbar-toggler {
+    outline: none !important;
   }
 }

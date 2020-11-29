@@ -3,14 +3,14 @@ import "../App.css";
 import About from "./About";
 import Contact from "./Contact";
 import Landing from "./Landing";
-import Nav from "./Nav";
+import Navigation from "./Navigation";
 import Portfolio from "./Portfolio";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Nav />
+        <Navigation />
         <Route exact path="/">
           <Landing />
         </Route>

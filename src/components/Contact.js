@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import Note from "./common/Note";
+import Toggle from "./common/Toggle";
 
 export default class Contact extends Component {
   render() {
     return (
-      <Note title="Contact Me" text="lorem" />
+      <div>
+        <Note title="Contact Me" text="lorem" />
+        {/* <Toggle onClick={!clicked} clicked = false /> */}
+      </div>
       // <div className="contact-page">
       //   <div id="container">
       //     <div class="paper">
