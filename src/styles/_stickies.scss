@@ -89,3 +89,11 @@ ul li a:focus {
   position: relative;
   z-index: 5;
 }
+
+@media (max-width: 375px) {
+  ul li a {
+    width: 17em;
+    height: 17em;
+    padding: 1em;
+  }
+}

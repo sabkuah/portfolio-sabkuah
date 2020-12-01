@@ -11,16 +11,21 @@
   }
 
   .frame-outer {
-    @include outer-frame-lg;
+    @include outer-frame-sm;
   }
 
   .frame-inner {
-    @include inner-frame-lg;
+    @include inner-frame-sm;
   }
 
   //Styling for Content Box and Filtering Title
   .title-box {
     @include titlebox;
+
+    .title-sticky {
+      max-width: 85%;
+      margin-top: 1em;
+    }
 
     .project-filters {
       display: flex;
@@ -29,7 +34,7 @@
     }
 
     .filter-btn {
-      @include brand-button;
+      @include brand-button-sm;
       margin: 1%;
     }
 
@@ -42,28 +47,18 @@
     }
 
     .filter-btn-active {
-      @include brand-button;
+      @include brand-button-sm;
       margin: 1%;
       background-color: #4a777a;
       outline: none;
     }
   }
 
-  //For Mobile View
-  @media screen and(max-width: 375px) {
-    .frame-outer {
-      @include outer-frame-sm;
-    }
+  //For Tablet View
 
-    .frame-inner {
-      @include inner-frame-sm;
-    }
+  @media all and(min-width: 768px) {
     .title-sticky {
-      min-width: 85%;
-    }
-
-    .filter-btn {
-      @include brand-button-sm;
+      max-width: 50% !important;
     }
   }
 }

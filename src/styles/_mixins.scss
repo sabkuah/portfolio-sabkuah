@@ -16,7 +16,7 @@
 
 @mixin brand-button-sm {
   background-color: $brand-color;
-  //border: none;
+  border: none;
   color: white;
   padding: 0.5em 1em;
   text-align: center;
@@ -24,12 +24,13 @@
   //display: inline-block;
   font-size: 14px;
   text-transform: uppercase;
-  margin: 20px;
+  margin: 5px 10px 5px 0px;
   justify-content: space-around;
   border-radius: 50px;
 }
 
 //Corkboard Frames
+//Outer Frame
 @mixin outer-frame-lg {
   border: 6px solid #a9a9b0;
   width: 92%;
@@ -40,11 +41,21 @@
 }
 
 @mixin outer-frame-md {
+  height: 100%;
+  width: 100%;
+  border: 5px solid #a9a9b0;
 }
 
 @mixin outer-frame-sm {
   border: 3px solid #a9a9b0;
+  width: 92%;
+  height: fit-content;
+  box-shadow: 20px 20px 50px grey;
+  border-radius: 2rem;
+  background-color: #98989c;
 }
+
+//Inner Frame
 
 @mixin inner-frame-lg {
   height: 100%;
@@ -54,10 +65,17 @@
 }
 
 @mixin inner-frame-md {
+  height: 100%;
+  border: 14px solid #333;
+  border-radius: 2rem;
+  background-image: url(../images/cork.png);
 }
 
 @mixin inner-frame-sm {
+  height: 100%;
   border: 10px solid #333;
+  border-radius: 2rem;
+  background-image: url(../images/cork.png);
 }
 
 //Title Stickies
@@ -72,10 +90,11 @@
     background-color: $body-bg-color;
     font-family: $body-font;
     font-weight: bold;
-    width: 40%;
+    //width: 40%;
     height: fit-content;
     margin: 2%;
     padding: 2%;
+    //box-shadow: 5px 10px 25px #a5a5a5;
   }
 }
 

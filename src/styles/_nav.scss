@@ -8,7 +8,7 @@ nav {
 
   .nav-link {
     font-family: $body-font;
-    font-size: 20px;
+    font-size: 14px;
     color: $brand-color;
     text-transform: uppercase;
     font-weight: bolder;
@@ -32,10 +32,17 @@ nav {
   }
 
   .navbar-toggler-icon {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .navbar-toggler {
     outline: none !important;
+  }
+
+  @media all and (min-width: 768px) {
+    .navbar-toggler-icon,
+    .nav-link {
+      font-size: 115%;
+    }
   }
 }

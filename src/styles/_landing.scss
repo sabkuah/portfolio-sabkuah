@@ -1,143 +1,186 @@
 .landing {
-  height: calc(92vh - 56px);
+  // height: calc(92vh - 56px);
   font-family: $body-font;
-  display: flex;
-  // background-image: linear-gradient(to right, white, #f5f5f5);
+  // display: flex;
+  // // background-image: linear-gradient(to right, white, #f5f5f5);
 
-  //Left Welcome
+  // //Left Welcome
   #landing-message {
-    width: 50vw;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+    //   width: 50vw;
+    //   height: 100%;
+    //   display: flex;
+    //   justify-content: center;
+
+    //   #welcome {
+    //     position: absolute;
+    //     top: 40%;
+
+    height: 25vh;
 
     #welcome {
-      position: absolute;
-      top: 40%;
+      height: 100%;
+      margin-top: 1em;
+
+      h1 {
+        font-size: 25px;
+      }
 
       p {
-        color: $brand-color;
+        font-size: 16px;
       }
 
       #landing-buttons {
-        justify-content: center;
-      }
+        margin-top: 1%;
 
-      .l-btn {
-        @include brand-button;
+        .l-btn {
+          font-size: 14px;
+        }
       }
+    }
 
-      .l-btn:hover {
-        background-color: $hover-color;
-      }
+    p {
+      color: $brand-color;
+    }
+
+    #landing-buttons {
+      justify-content: center;
+    }
+
+    .l-btn {
+      @include brand-button;
+    }
+
+    .l-btn:hover {
+      background-color: $hover-color;
     }
   }
 
-  //Right Welcome
+  // //Right Welcome
   #landing-board {
-    width: 50vw;
-    height: calc(92vh - 56px);
-    position: relative;
-
     .board-wrapper {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
+      height: 60vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
     }
 
     .frame-outer {
-      @include outer-frame-lg;
+      // margin-top: 2%;
+      // height: 100%;
+      // width: 92%;
+      // border: 3px solid #a9a9b0;
+      @include outer-frame-sm;
       height: 100%;
     }
 
     .frame-inner {
-      width: 100%;
-      @include inner-frame-lg;
+      // height: 100%;
+      // width: 100%;
+      // border: 10px solid #333;
+      @include inner-frame-sm;
+      padding: 2em;
     }
 
-    //Specific styles for landing page stickies
-    .landing-stickies {
-      padding: 5%;
-      display: flex;
-      flex-wrap: wrap;
+    #s3,
+    #s4 {
+      display: none;
+    }
 
-      li a {
-        text-decoration: none;
-        color: #000;
-        display: block;
-        height: 10em;
-        width: 10em;
-        padding: 1em;
-        margin: 1em;
-      }
+    ul li a {
+      height: 7em;
+      width: 7em;
+    }
 
-      li p {
-        font-family: $handwriting;
-        font-size: 180%;
-        color: #333;
+    ul li {
+      h2 {
+        font-size: 16px;
       }
 
-      li:nth-child(even) a {
-        background: #cfc;
-      }
-      li:nth-child(3n) a {
-        background: #ccf;
-      }
-      li:nth-child(5n) a {
-        background: #ffc;
+      p {
+        font-size: 12px;
       }
     }
   }
 
-  @media all and (max-width: 768px) {
+  //Specific styles for landing page stickies
+  .landing-stickies {
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+
+    // li a {
+    //   text-decoration: none;
+    //   color: #000;
+    //   display: block;
+    //   height: 10em;
+    //   width: 10em;
+    //   padding: 1em;
+    //   margin: 1em;
+    // }
+
+    li p {
+      font-family: $handwriting;
+      font-size: 180%;
+      color: #333;
+    }
+
+    li:nth-child(even) a {
+      background: #cfc;
+    }
+    li:nth-child(3n) a {
+      background: #ccf;
+    }
+    li:nth-child(5n) a {
+      background: #ffc;
+    }
+  }
+
+  @media all and (min-width: 768px) {
     #landing-message {
       //position: relative;
-      height: 30vh;
+      height: 25vh;
       //justify-content: center;
 
       #welcome {
         //align-content: center;
         height: 100%;
+        margin-top: 2em;
 
         h1 {
-          font-size: 33px;
+          font-size: 40px;
         }
 
         p {
-          font-size: 20px;
+          font-size: 25px;
         }
 
         #landing-buttons {
           margin-top: 1%;
 
           .l-btn {
-            font-size: 16px;
+            font-size: 20px;
           }
         }
       }
     }
 
     #landing-board {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+
       .board-wrapper {
         height: 60vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
+        width: 80vw;
       }
 
       .frame-outer {
-        margin-top: 2%;
-        height: 100%;
-        width: 90%;
-        border: 5px solid #a9a9b0;
+        // margin-top: 2%;
+        @include outer-frame-md;
       }
 
       .frame-inner {
-        height: 100%;
-        width: 100%;
-        border: 14px solid #333;
+        @include inner-frame-md;
       }
 
       #s3,
@@ -162,71 +205,120 @@
     }
   }
 
-  @media all and (max-width: 375px) {
+  @media all and (min-width: 1025px) {
+    height: calc(92vh - 56px);
+    display: flex;
+
+    // //Left Welcome
     #landing-message {
-      height: 30vh;
+      width: 50vw;
+      height: 100%;
+      display: flex;
+      justify-content: center;
 
       #welcome {
-        height: 100%;
+        position: absolute;
+        top: 40%;
 
         h1 {
-          font-size: 28px;
+          font-size: 45px;
         }
 
         p {
-          font-size: 14px;
-        }
-
-        #landing-buttons {
-          margin-top: 1%;
-
-          .l-btn {
-            font-size: 14px;
-          }
+          font-size: 25px;
         }
       }
     }
 
     #landing-board {
+      width: 50vw;
+      height: calc(92vh - 56px);
+      position: relative;
+
       .board-wrapper {
-        height: 60vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
 
       .frame-outer {
-        margin-top: 2%;
+        @include outer-frame-lg;
         height: 100%;
-        width: 92%;
-        border: 3px solid #a9a9b0;
       }
 
       .frame-inner {
-        height: 100%;
         width: 100%;
-        border: 10px solid #333;
-      }
-
-      #s3,
-      #s4 {
-        display: none;
-      }
-
-      ul li a {
-        height: 7em;
-        width: 7em;
-      }
-
-      ul li {
-        h2 {
-          font-size: 16px;
-        }
-
-        p {
-          font-size: 12px;
-        }
+        @include inner-frame-lg;
       }
     }
+    // @media all and (max-width: 375px) {
+    //   #landing-message {
+    //     height: 30vh;
+
+    //     #welcome {
+    //       height: 100%;
+
+    //       h1 {
+    //         font-size: 28px;
+    //       }
+
+    //       p {
+    //         font-size: 14px;
+    //       }
+
+    //       #landing-buttons {
+    //         margin-top: 1%;
+
+    //         .l-btn {
+    //           font-size: 14px;
+    //         }
+    //       }
+    //     }
+    //   }
+
+    //   #landing-board {
+    //     .board-wrapper {
+    //       height: 60vh;
+    //       width: 100vw;
+    //       display: flex;
+    //       justify-content: center;
+    //     }
+
+    //     .frame-outer {
+    //       margin-top: 2%;
+    //       height: 100%;
+    //       width: 92%;
+    //       border: 3px solid #a9a9b0;
+    //     }
+
+    //     .frame-inner {
+    //       height: 100%;
+    //       width: 100%;
+    //       border: 10px solid #333;
+    //     }
+
+    //     #s3,
+    //     #s4 {
+    //       display: none;
+    //     }
+
+    //     ul li a {
+    //       height: 7em;
+    //       width: 7em;
+    //     }
+
+    //     ul li {
+    //       h2 {
+    //         font-size: 16px;
+    //       }
+
+    //       p {
+    //         font-size: 12px;
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
