@@ -165,24 +165,22 @@
     }
 
     #landing-board {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+
       .board-wrapper {
         height: 60vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
+        width: 80vw;
       }
 
       .frame-outer {
         // margin-top: 2%;
-        height: 100%;
-        width: 80%;
-        border: 5px solid #a9a9b0;
+        @include outer-frame-md;
       }
 
       .frame-inner {
-        height: 100%;
-        width: 100%;
-        border: 14px solid #333;
+        @include inner-frame-md;
       }
 
       #s3,
