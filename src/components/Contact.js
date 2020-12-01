@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Note from "./common/Note";
-import Toggle from "./common/Toggle";
 
 export default class Contact extends Component {
   render() {
