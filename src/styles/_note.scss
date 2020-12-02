@@ -1,12 +1,12 @@
 .note {
   position: relative;
-  min-width: 500px;
+  width: 90%;
   min-height: 300px;
-  width: 40%;
   height: fit-content;
   background-color: #fcfcff;
   border: 1px solid #e3e3e3;
-  margin: 2%;
+  margin: 6%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   .note-content {
     h2 {
@@ -38,44 +38,52 @@
     transform: rotate(-2deg) skew(0, 0) translate(0%, -5px);
   }
 
-  .left-shadow {
-    width: 140px;
-    height: 140px;
-    bottom: -5px;
-    left: -12px;
-    position: absolute;
-    z-index: -6;
-    display: inline-block;
-    -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
-    box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
-    -moz-transform: scale(1) rotate(274deg) translate(20px, 25px)
-      skew(9deg, 0deg);
-    -webkit-transform: scale(1) rotate(274deg) translate(20px, 25px)
-      skew(9deg, 0deg);
-    -o-transform: scale(1) rotate(274deg) translate(20px, 25px) skew(9deg, 0deg);
-    -ms-transform: scale(1) rotate(274deg) translate(20px, 25px)
-      skew(9deg, 0deg);
-    transform: scale(1) rotate(274deg) translate(20px, 25px) skew(9deg, 0deg);
+  @media all and (min-width: 768px) {
+    width: 80%;
   }
-  .right-shadow {
-    width: 140px;
-    height: 140px;
-    bottom: -13px;
-    right: -4px;
-    position: absolute;
-    z-index: -6;
-    display: inline-block;
-    -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
-    box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
-    -moz-transform: scale(1) rotate(184deg) translate(20px, 25px)
-      skew(9deg, 0deg);
-    -webkit-transform: scale(1) rotate(184deg) translate(20px, 25px)
-      skew(9deg, 0deg);
-    -o-transform: scale(1) rotate(184deg) translate(20px, 25px) skew(9deg, 0deg);
-    -ms-transform: scale(1) rotate(184deg) translate(20px, 25px)
-      skew(9deg, 0deg);
-    transform: scale(1) rotate(184deg) translate(20px, 25px) skew(9deg, 0deg);
+
+  @media all and (min-width: 1025px) {
+    //max-width: 500px;
   }
+
+  // .left-shadow {
+  //   width: 140px;
+  //   height: 140px;
+  //   bottom: -5px;
+  //   left: -12px;
+  //   position: absolute;
+  //   z-index: -6;
+  //   display: inline-block;
+  //   -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
+  //   -moz-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
+  //   box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
+  //   -moz-transform: scale(1) rotate(274deg) translate(20px, 25px)
+  //     skew(9deg, 0deg);
+  //   -webkit-transform: scale(1) rotate(274deg) translate(20px, 25px)
+  //     skew(9deg, 0deg);
+  //   -o-transform: scale(1) rotate(274deg) translate(20px, 25px) skew(9deg, 0deg);
+  //   -ms-transform: scale(1) rotate(274deg) translate(20px, 25px)
+  //     skew(9deg, 0deg);
+  //   transform: scale(1) rotate(274deg) translate(20px, 25px) skew(9deg, 0deg);
+  // }
+  // .right-shadow {
+  //   width: 140px;
+  //   height: 140px;
+  //   bottom: -13px;
+  //   right: -4px;
+  //   position: absolute;
+  //   z-index: -6;
+  //   display: inline-block;
+  //   -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
+  //   -moz-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
+  //   box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
+  //   -moz-transform: scale(1) rotate(184deg) translate(20px, 25px)
+  //     skew(9deg, 0deg);
+  //   -webkit-transform: scale(1) rotate(184deg) translate(20px, 25px)
+  //     skew(9deg, 0deg);
+  //   -o-transform: scale(1) rotate(184deg) translate(20px, 25px) skew(9deg, 0deg);
+  //   -ms-transform: scale(1) rotate(184deg) translate(20px, 25px)
+  //     skew(9deg, 0deg);
+  //   transform: scale(1) rotate(184deg) translate(20px, 25px) skew(9deg, 0deg);
+  // }
 }

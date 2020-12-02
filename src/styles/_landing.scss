@@ -15,11 +15,11 @@
     //     position: absolute;
     //     top: 40%;
 
-    height: 25vh;
+    height: 35vh;
 
     #welcome {
       height: 100%;
-      margin-top: 1em;
+      margin-top: 0;
 
       h1 {
         font-size: 25px;
@@ -30,8 +30,6 @@
       }
 
       #landing-buttons {
-        margin-top: 1%;
-
         .l-btn {
           font-size: 14px;
         }
@@ -58,7 +56,7 @@
   // //Right Welcome
   #landing-board {
     .board-wrapper {
-      height: 60vh;
+      height: 50vh;
       width: 100vw;
       display: flex;
       justify-content: center;
@@ -82,8 +80,8 @@
     }
 
     ul li a {
-      height: 7em;
-      width: 7em;
+      height: 10em;
+      width: 10em;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -95,7 +93,7 @@
       }
 
       p {
-        font-size: 12px;
+        font-size: 20px;
       }
     }
   }
@@ -145,27 +143,27 @@
   @media all and (min-width: 768px) {
     #landing-message {
       //position: relative;
-      height: 25vh;
+      height: 40vh;
       //justify-content: center;
 
       #welcome {
         //align-content: center;
         height: 100%;
-        margin-top: 2em;
+        margin-top: 0;
 
         h1 {
-          font-size: 40px;
+          font-size: 38px;
         }
 
         p {
-          font-size: 25px;
+          font-size: 23px;
         }
 
         #landing-buttons {
-          margin-top: 1%;
+          margin-top: 0;
 
           .l-btn {
-            font-size: 20px;
+            font-size: 18px;
           }
         }
       }
@@ -177,7 +175,7 @@
       justify-content: center;
 
       .board-wrapper {
-        height: 60vh;
+        height: 50vh;
         width: 80vw;
       }
 

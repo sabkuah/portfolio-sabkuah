@@ -1,8 +1,8 @@
 .about-page {
   font: $body-font;
-  width: 100vw;
-  height: calc(92vh - 56px);
-  position: relative;
+  //width: 100vw;
+  //height: calc(92vh - 56px);
+  //position: relative;
 
   .board-wrapper {
     height: calc(92vh - 56px);
@@ -11,23 +11,30 @@
   }
 
   .frame-outer {
-    @include outer-frame-lg;
+    @include outer-frame-sm;
   }
 
   .frame-inner {
-    @include inner-frame-lg;
+    @include inner-frame-sm;
   }
 
   .title-box {
     @include titlebox;
 
-    .about-btns {
-      @include brand-button;
+    .title-sticky {
+      max-width: 85%;
+      margin-top: 1em;
     }
-  }
 
-  #about-me {
-    width: 80%;
+    .about-btn-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .about-btns {
+      @include brand-button-sm;
+    }
   }
 
   .about-content {
@@ -35,68 +42,123 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-}
 
-.polaroid-container {
-  position: relative;
-  width: 50vmin;
-  height: 50vmin;
-
-  #card-1 {
-    @include polaroid-animation;
-    transform: translate(5%, 15%) scale(0.35) rotate(-5deg);
-  }
-
-  #card-2 {
-    @include polaroid-animation;
-    transform: translate(-10%, -20%) scale(0.35) rotate(-1deg);
-  }
-
-  #card-3 {
-    @include polaroid-animation;
-    transform: translate(-20%, 5%) scale(0.35) rotate(-4deg);
-  }
-
-  #card-4 {
-    @include polaroid-animation;
-    transform: translate(10%, -7%) scale(0.35) rotate(7deg);
-  }
-
-  .polaroid {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .row-container {
     width: 100%;
-    height: 100%;
-    background-color: darken(white, 2%);
-    border-radius: 2px;
-    box-shadow: 2px 2px 5px rgba(#111, 0.35);
   }
 
-  .photo-container {
-    display: block;
+  //Note with cartoon
+  #about-me {
     width: 90%;
-    height: 80%;
-    margin: 5%;
-    box-shadow: inset 0 0 5px rgba(#222, 0.35);
-    border-radius: 2px;
-    //filter: sepia(0.2) brightness(0.9) contrast(1.2);
-    transition: opacity 0.35s ease-out;
-    opacity: 0.85;
-    will-change: opacity;
+
+    .standing-cartoon {
+      width: 400px;
+      // display:none;
+    }
   }
 
-  .photo {
-    width: 100%;
-    height: 100%;
+  .stickies {
+    ul li a {
+      width: 14rem;
+      height: 14rem;
+      padding: 2em;
+      margin: 2em;
+    }
   }
 
-  .frame {
-    display: block;
-    font-weight: 500;
-    color: #555;
-    font-size: 3vmin;
-    opacity: 0.75;
-    text-align: center;
+  .polaroid-container {
+    position: relative;
+    width: 50vmin;
+    height: 50vmin;
+
+    #card-1 {
+      @include polaroid-animation;
+      transform: translate(5%, 15%) scale(0.35) rotate(-5deg);
+    }
+
+    #card-2 {
+      @include polaroid-animation;
+      transform: translate(-10%, -20%) scale(0.35) rotate(-1deg);
+    }
+
+    #card-3 {
+      @include polaroid-animation;
+      transform: translate(-20%, 5%) scale(0.35) rotate(-4deg);
+    }
+
+    #card-4 {
+      @include polaroid-animation;
+      transform: translate(10%, -7%) scale(0.35) rotate(7deg);
+    }
+
+    .polaroid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: darken(white, 2%);
+      border-radius: 2px;
+      box-shadow: 2px 2px 5px rgba(#111, 0.35);
+    }
+
+    .photo-container {
+      display: block;
+      width: 90%;
+      height: 80%;
+      margin: 5%;
+      box-shadow: inset 0 0 5px rgba(#222, 0.35);
+      border-radius: 2px;
+      //filter: sepia(0.2) brightness(0.9) contrast(1.2);
+      transition: opacity 0.35s ease-out;
+      opacity: 0.85;
+      will-change: opacity;
+    }
+
+    .photo {
+      width: 100%;
+      height: 100%;
+    }
+
+    .frame {
+      display: block;
+      font-weight: 500;
+      color: #555;
+      font-size: 3vmin;
+      opacity: 0.75;
+      text-align: center;
+    }
+
+    @media all and (min-width: 768px) {
+    }
+
+    @media all and (min-width: 1025px) {
+      .frame-outer {
+        @include outer-frame-lg;
+      }
+
+      .frame-inner {
+        @include inner-frame-lg;
+      }
+
+      .title-box {
+        @include titlebox;
+
+        .title-sticky {
+          min-width: 60%;
+          //max-width: ;
+          margin-top: 1em;
+        }
+      }
+
+      .stickies {
+        ul li a {
+          width: 17rem;
+          height: 17rem;
+          padding: 2em;
+          margin: 2em;
+        }
+      }
+    }
   }
 }

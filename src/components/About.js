@@ -1,5 +1,4 @@
 import React from "react";
-import Note from "./common/Note";
 
 export default function About() {
   return (
@@ -11,22 +10,22 @@ export default function About() {
               {/* flex-box */}
               <div className="title-sticky">
                 <h3>A Little About Me</h3>
-                <div className="row justify-content-center">
+                <div className="about-btn-container">
                   <button className="about-btns">See Resume</button>
                   <button className="about-btns">See Portfolio</button>
                 </div>
               </div>
             </div>
             <div className="about-content">
-              <div className="row">
+              <div className="row row-container">
                 {/* LEFT COLUMN: BIO & POLAROIDS */}
-                <div className="col-8 d-flex mx-3 flex-column ">
+                <div className="col-sm-12 col-lg-7 d-flex mx-3 flex-column align-items-center">
                   <div className="note" id="about-me">
                     <div className="tape" />
                     <div className="note-content">
                       <h2>Sabrina Kuah!!</h2>
                       <div className="row">
-                        <div className="col-9">
+                        <div className="col-sm-12 col-md-9">
                           <p>
                             I am currently completing the SSD program at BCIT.
                           </p>
@@ -47,11 +46,11 @@ export default function About() {
                             cupiditate!
                           </p>
                         </div>
-                        <div className="col-3">
+                        <div className="col-sm-12 col-md-3">
                           <img
                             src="cartoon_standing.svg"
                             alt="cartoon of me"
-                            style={{ width: "500px" }}
+                            className="standing-cartoon"
                           />
                         </div>
                       </div>
@@ -100,11 +99,11 @@ export default function About() {
                   </div>
                 </div>
                 {/* RIGHT COLUMN: STICKIES */}
-                <div className="col">
+                <div className="col-sm-12 col-lg-4 d-flex justify-content-center">
                   <div className="stickies">
                     <ul>
                       <li id="languages">
-                        <a href="#">
+                        <a>
                           <h2>Technologies</h2>
                           <ul>
                             <li>HTML/CSS/SCSS</li>
@@ -115,7 +114,7 @@ export default function About() {
                         </a>
                       </li>
                       <li id="skills">
-                        <a href="#">
+                        <a>
                           <h2>Skills</h2>
                           <ul>
                             <li>Git Version Control</li>
@@ -126,7 +125,7 @@ export default function About() {
                         </a>
                       </li>
                       <li id="knowledge">
-                        <a href="#">
+                        <a>
                           <h2>Tools</h2>
                           <ul>
                             <li>Visual Studio Code</li>
