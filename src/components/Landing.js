@@ -10,12 +10,13 @@ export default class Landing extends Component {
         <div id="landing-message">
           <div id="welcome">
             <img
+              className="landing-cartoon"
               src="profile_cartoon.svg"
               alt="cartoon of me"
-              style={{ width: "300px", "margin-bottom": "20px" }}
+              // style={{ width: "300px", "margin-bottom": "20px" }}
             />
             <h1>Hi, I am Sabrina Kuah</h1>
-            <p>Full-Stack Web Developer, Educator</p>
+            {/* <p>Full-Stack Web Developer, Educator</p> */}
             <div className="row" id="landing-buttons">
               <Link to="/portfolio">
                 <li className="l-btn">See Portfolio</li>
@@ -32,23 +33,16 @@ export default class Landing extends Component {
               <div className="frame-inner">
                 <ul className="landing-stickies">
                   <li id="s1">
-                    <a href="#">
-                      <h2></h2>
-                      <p>
-                        FULL-STACK <br />
-                        WEB-DEVELOPER
-                      </p>
-                    </a>
+                    <p>
+                      FULL-STACK <br />
+                      WEB-DEVELOPER
+                    </p>
                   </li>
                   <li id="s2">
-                    <a href="#">
-                      <p>Educator</p>
-                    </a>
+                    <p>Educator</p>
                   </li>
                   <li id="s3">
-                    <a href="#">
-                      <p>Cat Mom</p>
-                    </a>
+                    <p>Cat Mom</p>
                   </li>
                 </ul>
               </div>

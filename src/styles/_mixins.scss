@@ -33,17 +33,17 @@
 //Outer Frame
 @mixin outer-frame-lg {
   border: 6px solid #a9a9b0;
-  width: 92%;
-  height: fit-content;
-  box-shadow: 20px 20px 50px grey;
-  border-radius: 2rem;
-  background-color: #98989c;
+  //width: 92%;
+  //height: fit-content;
+  // box-shadow: 20px 20px 50px grey;
+  // border-radius: 2rem;
+  // background-color: #98989c;
 }
 
 @mixin outer-frame-md {
-  height: 100%;
-  width: 100%;
   border: 5px solid #a9a9b0;
+  height: 100%;
+  width: 90%;
 }
 
 @mixin outer-frame-sm {

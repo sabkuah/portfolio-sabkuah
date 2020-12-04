@@ -24,7 +24,7 @@ ul {
   margin: 0;
 }
 
-ul li a {
+ul li {
   text-decoration: none !important;
   color: inherit !important;
   background: #ffc;
@@ -49,25 +49,25 @@ ul li a {
   -o-transition: -o-transform 0.15s linear;
 }
 
-ul li:nth-child(even) a {
-  -webkit-transform: rotate(4deg);
-  -moz-transform: rotate(4deg);
-  -o-transform: rotate(4deg);
+ul li:nth-child(even) {
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
   position: relative;
   top: 5px;
   background: mistyrose;
 }
 
-ul li:nth-child(3n) a {
-  -webkit-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
-  -o-transform: rotate(-3deg);
+ul li:nth-child(3n) {
+  -webkit-transform: rotate(-9deg);
+  -moz-transform: rotate(-9deg);
+  -o-transform: rotate(-9deg);
   position: relative;
   top: -5px;
   background: skyblue;
 }
 
-ul li:nth-child(5n) a {
+ul li:nth-child(5n) {
   -webkit-transform: rotate(5deg);
   -moz-transform: rotate(5deg);
   -o-transform: rotate(5deg);
@@ -76,8 +76,8 @@ ul li:nth-child(5n) a {
   background: snow;
 }
 
-ul li a:hover,
-ul li a:focus {
+ul li:hover,
+ul li:focus {
   -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
   -o-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
@@ -91,7 +91,7 @@ ul li a:focus {
 }
 
 @media (max-width: 375px) {
-  ul li a {
+  ul li {
     width: 17em;
     height: 17em;
     padding: 1em;
