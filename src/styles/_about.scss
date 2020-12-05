@@ -1,8 +1,5 @@
 .about-page {
   font: $body-font;
-  //width: 100vw;
-  //height: calc(92vh - 56px);
-  //position: relative;
 
   .board-wrapper {
     height: calc(92vh - 56px);
@@ -18,6 +15,7 @@
     @include inner-frame-sm;
   }
 
+  //Title Box: A Little About Me
   .title-box {
     @include titlebox;
 
@@ -37,128 +35,200 @@
     }
   }
 
+  //Main Content
+
   .about-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-  }
 
-  .row-container {
-    width: 100%;
-  }
-
-  //Note with cartoon
-  #about-me {
-    width: 90%;
-
-    .standing-cartoon {
-      width: 400px;
-      // display:none;
-    }
-  }
-
-  .stickies {
-    ul li a {
-      width: 14rem;
-      height: 14rem;
-      padding: 2em;
-      margin: 2em;
-    }
-  }
-
-  .polaroid-container {
-    position: relative;
-    width: 50vmin;
-    height: 50vmin;
-
-    #card-1 {
-      @include polaroid-animation;
-      transform: translate(5%, 15%) scale(0.35) rotate(-5deg);
-    }
-
-    #card-2 {
-      @include polaroid-animation;
-      transform: translate(-10%, -20%) scale(0.35) rotate(-1deg);
-    }
-
-    #card-3 {
-      @include polaroid-animation;
-      transform: translate(-20%, 5%) scale(0.35) rotate(-4deg);
-    }
-
-    #card-4 {
-      @include polaroid-animation;
-      transform: translate(10%, -7%) scale(0.35) rotate(7deg);
-    }
-
-    .polaroid {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: darken(white, 2%);
-      border-radius: 2px;
-      box-shadow: 2px 2px 5px rgba(#111, 0.35);
-    }
-
-    .photo-container {
-      display: block;
+    //Note with cartoon
+    #about-me {
       width: 90%;
-      height: 80%;
-      margin: 5%;
-      box-shadow: inset 0 0 5px rgba(#222, 0.35);
-      border-radius: 2px;
-      //filter: sepia(0.2) brightness(0.9) contrast(1.2);
-      transition: opacity 0.35s ease-out;
-      opacity: 0.85;
-      will-change: opacity;
+
+      .standing-cartoon {
+        max-height: 200px;
+      }
     }
 
-    .photo {
+    .stickies {
+      .about-sticky {
+        width: 14em;
+        height: 14em;
+        padding: 1em;
+        margin: 2em;
+
+        h2 {
+          font-size: 1.5em;
+          font-weight: bolder;
+          padding-bottom: 0.5em;
+          margin-bottom: 0.5em;
+          border-bottom: 0.5px solid $brand-color;
+        }
+
+        p {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .polaroid-container {
       width: 100%;
-      height: 100%;
+      height: fit-content;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .polaroid {
+        width: 15em;
+        height: 20em;
+        margin: 2%;
+        background-color: darken(white, 2%);
+        border-radius: 2px;
+        box-shadow: 2px 2px 5px rgba(#111, 0.35);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .photo-container {
+          width: 80%;
+          height: 66%;
+          margin-top: 8%;
+          border-radius: 2px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
     }
 
-    .frame {
-      display: block;
-      font-weight: 500;
-      color: #555;
-      font-size: 3vmin;
-      opacity: 0.75;
-      text-align: center;
+    // .polaroid-container {
+    //   position: relative;
+    //   width: 70vmin;
+    //   height: 70vmin;
+
+    //   #card-1 {
+    //     @include polaroid-animation;
+    //     transform: translate(5%, 15%) scale(0.35) rotate(-5deg);
+    //   }
+
+    //   #card-2 {
+    //     @include polaroid-animation;
+    //     transform: translate(-10%, -20%) scale(0.35) rotate(-1deg);
+    //   }
+
+    //   #card-3 {
+    //     @include polaroid-animation;
+    //     transform: translate(-20%, 5%) scale(0.35) rotate(-4deg);
+    //   }
+
+    //   #card-4 {
+    //     @include polaroid-animation;
+    //     transform: translate(10%, -7%) scale(0.35) rotate(7deg);
+    //   }
+
+    //   .polaroid {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: darken(white, 2%);
+    //     border-radius: 2px;
+    //     box-shadow: 2px 2px 5px rgba(#111, 0.35);
+    //   }
+
+    //   .photo-container {
+    //     display: block;
+    //     width: 90%;
+    //     height: 80%;
+    //     margin: 5%;
+    //     box-shadow: inset 0 0 5px rgba(#222, 0.35);
+    //     border-radius: 2px;
+    //     //filter: sepia(0.2) brightness(0.9) contrast(1.2);
+    //     transition: opacity 0.35s ease-out;
+    //     opacity: 0.85;
+    //     will-change: opacity;
+    //   }
+
+    //   .photo {
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+
+    //   .frame {
+    //     display: block;
+    //     font-weight: 500;
+    //     color: #555;
+    //     font-size: 3vmin;
+    //     opacity: 0.75;
+    //     text-align: center;
+    //   }
+    // }
+  }
+
+  @media all and (min-width: 768px) {
+    .frame-outer {
+      @include outer-frame-md;
+      height: fit-content;
     }
 
-    @media all and (min-width: 768px) {
+    .frame-inner {
+      @include inner-frame-md;
     }
 
-    @media all and (min-width: 1025px) {
-      .frame-outer {
-        @include outer-frame-lg;
+    .title-box .title-sticky {
+      width: 60%;
+    }
+
+    .about-content {
+      #about-me .standing-cartoon {
+        max-height: 20em;
       }
 
-      .frame-inner {
-        @include inner-frame-lg;
-      }
+      .stickies {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+        }
 
-      .title-box {
-        @include titlebox;
+        .about-sticky {
+          width: 17em;
+          height: 17em;
 
-        .title-sticky {
-          min-width: 60%;
-          //max-width: ;
-          margin-top: 1em;
+          p {
+            margin: 10px;
+            padding-top: 1%;
+          }
         }
       }
 
-      // .stickies {
-      //   ul li a {
-      //     width: 17rem;
-      //     height: 17rem;
-      //     padding: 2em;
-      //     margin: 2em;
-      //   }
-      // }
+      .polaroid-container .polaroid {
+        width: 17em;
+        height: 24em;
+        margin: 4%;
+      }
+    }
+  }
+  @media all and (min-width: 1025px) {
+    .frame-outer {
+      @include outer-frame-lg;
+    }
+
+    .frame-inner {
+      @include inner-frame-lg;
+    }
+
+    .title-box {
+      @include titlebox;
+
+      .title-sticky {
+        min-width: 60%;
+        margin-top: 1em;
+      }
     }
   }
 }
