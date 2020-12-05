@@ -22,13 +22,6 @@
         font-size: 16px;
         color: $brand-color;
       }
-
-      #landing-buttons {
-        margin: 0;
-        .l-btn {
-          font-size: 14px;
-        }
-      }
     }
 
     #landing-buttons {
@@ -36,6 +29,7 @@
 
       .l-btn {
         @include brand-button;
+        font-size: 14px;
       }
 
       .l-btn:hover {

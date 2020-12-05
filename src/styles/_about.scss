@@ -43,12 +43,14 @@
     justify-content: space-evenly;
 
     //Note with cartoon
-    #about-me {
-      width: 90%;
+    .main-note-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
 
-      .standing-cartoon {
-        max-height: 200px;
-      }
+    .standing-cartoon {
+      max-height: 200px;
     }
 
     .stickies {
@@ -74,7 +76,6 @@
 
     .polaroid-container {
       width: 100%;
-      height: fit-content;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -103,70 +104,6 @@
         }
       }
     }
-
-    // .polaroid-container {
-    //   position: relative;
-    //   width: 70vmin;
-    //   height: 70vmin;
-
-    //   #card-1 {
-    //     @include polaroid-animation;
-    //     transform: translate(5%, 15%) scale(0.35) rotate(-5deg);
-    //   }
-
-    //   #card-2 {
-    //     @include polaroid-animation;
-    //     transform: translate(-10%, -20%) scale(0.35) rotate(-1deg);
-    //   }
-
-    //   #card-3 {
-    //     @include polaroid-animation;
-    //     transform: translate(-20%, 5%) scale(0.35) rotate(-4deg);
-    //   }
-
-    //   #card-4 {
-    //     @include polaroid-animation;
-    //     transform: translate(10%, -7%) scale(0.35) rotate(7deg);
-    //   }
-
-    //   .polaroid {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color: darken(white, 2%);
-    //     border-radius: 2px;
-    //     box-shadow: 2px 2px 5px rgba(#111, 0.35);
-    //   }
-
-    //   .photo-container {
-    //     display: block;
-    //     width: 90%;
-    //     height: 80%;
-    //     margin: 5%;
-    //     box-shadow: inset 0 0 5px rgba(#222, 0.35);
-    //     border-radius: 2px;
-    //     //filter: sepia(0.2) brightness(0.9) contrast(1.2);
-    //     transition: opacity 0.35s ease-out;
-    //     opacity: 0.85;
-    //     will-change: opacity;
-    //   }
-
-    //   .photo {
-    //     width: 100%;
-    //     height: 100%;
-    //   }
-
-    //   .frame {
-    //     display: block;
-    //     font-weight: 500;
-    //     color: #555;
-    //     font-size: 3vmin;
-    //     opacity: 0.75;
-    //     text-align: center;
-    //   }
-    // }
   }
 
   @media all and (min-width: 768px) {
@@ -185,7 +122,7 @@
 
     .about-content {
       #about-me .standing-cartoon {
-        max-height: 20em;
+        max-height: 15em;
       }
 
       .stickies {
@@ -214,6 +151,7 @@
     }
   }
   @media all and (min-width: 1025px) {
+    font-size: 120%;
     .frame-outer {
       @include outer-frame-lg;
     }
@@ -228,6 +166,104 @@
       .title-sticky {
         min-width: 60%;
         margin-top: 1em;
+      }
+
+      .about-btns {
+        @include brand-button;
+      }
+    }
+    .about-content {
+      .note {
+        width: 100%;
+        margin: 2%;
+      }
+
+      .stickies {
+        ul {
+          padding-right: 10%;
+        }
+
+        .about-sticky {
+          width: 18em;
+          height: 18em;
+          // font-size: 120%;
+
+          p {
+            margin: 10px;
+            padding-top: 1%;
+          }
+        }
+      }
+
+      .polaroid-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        height: fit-content;
+
+        #card-1 {
+          @include polaroid-animation;
+          transform: rotate(-5deg);
+        }
+
+        #card-2 {
+          @include polaroid-animation;
+          transform: rotate(3deg);
+        }
+
+        #card-3 {
+          @include polaroid-animation;
+          transform: rotate(-6deg);
+        }
+
+        #card-4 {
+          @include polaroid-animation;
+          transform: rotate(7deg);
+        }
+
+        // .polaroid {
+        //   top: 0;
+        //   left: 0;
+        //   width: 15em;
+        //   height: 20em;
+        //   background-color: darken(white, 2%);
+        //   border-radius: 2px;
+        //   box-shadow: 2px 2px 5px rgba(#111, 0.35);
+        // }
+
+        // .photo-container {
+        //   width: 90%;
+        //   height: 80%;
+        //   margin: 5%;
+        //   box-shadow: inset 0 0 5px rgba(#222, 0.35);
+        //   filter: sepia(0.2) brightness(0.9) contrast(1.2);
+        //   opacity: 0.9;
+        // }
+
+        // #card-1 {
+        //   @include polaroid-animation;
+        //   transform: scale(0.5) rotate(-5deg);
+        // }
+
+        // #card-2 {
+        //   @include polaroid-animation;
+        //   transform: scale(0.5) rotate(3deg);
+        // }
+
+        // #card-3 {
+        //   @include polaroid-animation;
+        //   transform: scale(0.5) rotate(-6deg);
+        // }
+
+        // #card-4 {
+        //   @include polaroid-animation;
+        //   transform: scale(0.5) rotate(7deg);
+        // }
+      }
+
+      .secondary-notes {
+        max-width: 40%;
       }
     }
   }

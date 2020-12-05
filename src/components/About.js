@@ -19,32 +19,74 @@ export default function About() {
             <div className="about-content">
               <div className="row row-container">
                 {/* LEFT COLUMN: BIO & POLAROIDS */}
-                <div className="col-sm-12 col-lg-7">
-                  <div className="note" id="about-me">
-                    <div className="tape" />
-                    <div className="note-content">
-                      <h2>Sabrina Kuah!!</h2>
-                      <div className="row">
-                        <div className="col-sm-12 col-md-8">
-                          <p>
-                            I am currently completing the SSD program at BCIT.
-                          </p>
+                <div className="col-sm-12 col-lg-8">
+                  <div className="main-note-container">
+                    <div className="note" id="about-me">
+                      <div className="tape" />
+                      <div className="note-content">
+                        <h2>Sabrina Kuah!!</h2>
+                        <div className="row">
+                          <div className="col-sm-12 col-md-8">
+                            <p>
+                              I am currently completing the SSD program at BCIT.
+                            </p>
 
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Magnam quos asperiores quod a aliquam nobis
-                            sed recusandae minima quidem, et soluta accusantium
-                            sit in suscipit! Earum voluptatem ducimus cumque
-                            cupiditate!
-                          </p>
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Magnam quos asperiores quod a
+                              aliquam nobis sed recusandae minima quidem, et
+                              soluta accusantium sit in suscipit! Earum
+                              voluptatem ducimus cumque cupiditate!
+                            </p>
+                          </div>
+
+                          <div className="col-sm-12 col-md-3">
+                            <img
+                              src="cartoon_standing.png"
+                              alt="cartoon of me"
+                              className="standing-cartoon"
+                            />
+                          </div>
                         </div>
-                        <div className="col-sm-12 col-md-3">
-                          <img
-                            src="cartoon_standing.png"
-                            alt="cartoon of me"
-                            className="standing-cartoon"
-                          />
-                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Stacked Polaroids */}
+                  <div className="polaroid-container">
+                    <div className="polaroid" id="card-1">
+                      <div className="photo-container">
+                        <img src="steam-day.jpeg" className="photo" alt="" />
+                      </div>
+
+                      <div className="caption row">
+                        <p>Dry coding on STEAM Day</p>
+                      </div>
+                    </div>
+
+                    <div className="polaroid" id="card-2">
+                      <div className="photo-container">
+                        <img src="microbit.jpeg" className="photo" alt="" />
+                      </div>
+                      <div className="caption">
+                        <p>Coding with Microbits</p>
+                      </div>
+                    </div>
+
+                    <div className="polaroid" id="card-3">
+                      <div className="photo-container">
+                        <img src="steam-day2.jpeg" className="photo" alt="" />
+                      </div>
+                      <div className="caption">
+                        <p>this is card 3</p>
+                      </div>
+                    </div>
+
+                    <div className="polaroid" id="card-4">
+                      <div className="photo-container">
+                        <img src="shrek.png" className="photo"></img>
+                      </div>
+                      <div className="caption">
+                        <p>this is card 4</p>
                       </div>
                     </div>
                   </div>
@@ -78,47 +120,9 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              {/* Stacked Polaroids */}
-              <div className="polaroid-container">
-                <div className="polaroid" id="card-1">
-                  <div className="photo-container">
-                    <img src="steam-day.jpeg" className="photo" alt="" />
-                  </div>
 
-                  <div className="caption row">
-                    <p>Dry coding on STEAM Day</p>
-                  </div>
-                </div>
-
-                <div className="polaroid" id="card-2">
-                  <div className="photo-container">
-                    <img src="microbit.jpeg" className="photo" alt="" />
-                  </div>
-                  <div className="caption">
-                    <p>Coding with Microbits</p>
-                  </div>
-                </div>
-
-                <div className="polaroid" id="card-3">
-                  <div className="photo-container">
-                    <img src="steam-day2.jpeg" className="photo" alt="" />
-                  </div>
-                  <div className="caption">
-                    <p>this is card 3</p>
-                  </div>
-                </div>
-
-                <div className="polaroid" id="card-4">
-                  <div className="photo-container">
-                    <img src="shrek.png" className="photo"></img>
-                  </div>
-                  <div className="caption">
-                    <p>this is card 4</p>
-                  </div>
-                </div>
-              </div>
               {/* Education Sticky */}
-              <div className="note row" id="education">
+              <div className="note secondary-notes" id="education">
                 <div className="tape" />
                 <div className="note-content">
                   <h2>Education</h2>
@@ -134,7 +138,7 @@ export default function About() {
                 <div className="right-shadow"></div>
               </div>
               {/* Other Skills Sticky */}
-              <div className="note row" id="other-skills">
+              <div className="note secondary-notes" id="other-skills">
                 <div className="tape" />
                 <div className="note-content">
                   <h2>Other Skills</h2>
@@ -153,7 +157,7 @@ export default function About() {
                 <div className="right-shadow"></div>
               </div>
               {/* Outside of Work Sticky */}
-              <div className="note row" id="outside-of-work">
+              {/* <div className="note secondary-notes" id="outside-of-work">
                 <div className="tape" />
                 <div className="note-content">
                   <h2>Outside of Work</h2>
@@ -165,7 +169,7 @@ export default function About() {
 
                 <div className="left-shadow"></div>
                 <div className="right-shadow"></div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

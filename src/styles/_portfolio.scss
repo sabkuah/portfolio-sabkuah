@@ -61,4 +61,13 @@
       max-width: 50% !important;
     }
   }
+
+  @media all and(min-width: 1025px) {
+    .title-sticky .filter-btn {
+      @include brand-button;
+    }
+    .title-sticky {
+      max-width: 50% !important;
+    }
+  }
 }
