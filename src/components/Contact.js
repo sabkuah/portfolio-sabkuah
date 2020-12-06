@@ -1,10 +1,19 @@
 import React, { Component } from "react";
+import { pageTransitionSlow, pageWipe } from "./common/Animation";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default class Contact extends Component {
   render() {
     return (
-      <div className="landing">
+      <motion.div
+        initial="initial"
+        animate="in"
+        exit="out"
+        variants={pageWipe}
+        transition={pageTransitionSlow}
+        className="landing"
+      >
         <div id="landing-board">
           <div className="board-wrapper">
             <div className="frame-outer">
@@ -88,7 +97,7 @@ export default class Contact extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   }
 }

@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { motion } from "framer-motion";
+import { pageTransition, pageFade } from "./common/Animation";
 import { getProjects, getTechnologies } from "../data/ProjectData";
 import PortfolioProject from "./Portfolio-project";
 import TechFilter from "./TechFilter";
@@ -42,7 +44,14 @@ export default class Portfolio extends Component {
         : projects;
 
     return (
-      <div className="portfolio-page">
+      <motion.div
+        initial="initial"
+        animate="in"
+        exit="out"
+        variants={pageFade}
+        transition={pageTransition}
+        className="portfolio-page"
+      >
         <div className="board-wrapper">
           <div className="frame-outer">
             <div className="frame-inner">
@@ -123,7 +132,7 @@ export default class Portfolio extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   }
 }

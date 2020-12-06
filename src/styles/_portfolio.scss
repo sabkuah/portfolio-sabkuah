@@ -21,6 +21,7 @@
   //Styling for Content Box and Filtering Title
   .title-box {
     @include titlebox;
+    font-family: $body-font;
 
     .title-sticky {
       max-width: 85%;

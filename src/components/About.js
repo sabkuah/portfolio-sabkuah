@@ -1,8 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { pageTransition, pageFade } from "./common/Animation";
 
 export default function About() {
   return (
-    <div className="about-page">
+    <motion.div
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageFade}
+      transition={pageTransition}
+      className="about-page"
+    >
       <div className="board-wrapper">
         <div className="frame-outer">
           <div className="frame-inner">
@@ -174,6 +183,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

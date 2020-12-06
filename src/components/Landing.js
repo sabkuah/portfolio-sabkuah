@@ -1,12 +1,20 @@
 import React, { Component } from "react";
-import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
-import board from "../images/3.png";
+import { motion } from "framer-motion";
+import { pageTransitionSlow, pageWipe } from "./common/Animation";
 
 export default class Landing extends Component {
   render() {
     return (
-      <div className="landing">
+      <motion.div
+        style={{ position: "absolute" }}
+        initial="initial"
+        animate="in"
+        exit="out"
+        variants={pageWipe}
+        transition={pageTransitionSlow}
+        className="landing"
+      >
         <div id="landing-message">
           <div id="welcome">
             <img
@@ -19,10 +27,28 @@ export default class Landing extends Component {
             {/* <p>Full-Stack Web Developer, Educator</p> */}
             <div className="row" id="landing-buttons">
               <Link to="/portfolio">
-                <li className="l-btn">See Portfolio</li>
+                <motion.button
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { duration: 0.5 },
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  className="l-btn"
+                >
+                  See Portfolio
+                </motion.button>
               </Link>
               <Link to="/about">
-                <button className="l-btn">About Me</button>
+                <motion.button
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { duration: 0.5 },
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  className="l-btn"
+                >
+                  About Me
+                </motion.button>
               </Link>
             </div>
           </div>
@@ -49,7 +75,7 @@ export default class Landing extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   }
 }
