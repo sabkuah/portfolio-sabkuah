@@ -150,7 +150,7 @@
       }
     }
   }
-  @media all and (min-width: 1025px) {
+  @media all and (min-width: 1024px) {
     font-size: 120%;
     .frame-outer {
       @include outer-frame-lg;
@@ -164,7 +164,7 @@
       @include titlebox;
 
       .title-sticky {
-        min-width: 60%;
+        max-width: 45%;
         margin-top: 1em;
       }
 
@@ -173,6 +173,7 @@
       }
     }
     .about-content {
+      padding: 4% !important;
       .note {
         width: 100%;
         margin: 2%;
@@ -180,7 +181,7 @@
 
       .stickies {
         ul {
-          padding-right: 10%;
+          padding-right: 12%;
         }
 
         .about-sticky {

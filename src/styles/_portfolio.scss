@@ -57,12 +57,31 @@
   //For Tablet View
 
   @media all and(min-width: 768px) {
+    font-size: 110%;
+    .frame-outer {
+      @include outer-frame-md;
+      height: fit-content;
+    }
+
+    .frame-inner {
+      @include inner-frame-md;
+    }
+
     .title-sticky {
       max-width: 50% !important;
     }
   }
 
   @media all and(min-width: 1025px) {
+    font-size: 120%;
+    .frame-outer {
+      @include outer-frame-lg;
+    }
+
+    .frame-inner {
+      @include inner-frame-lg;
+    }
+
     .title-sticky .filter-btn {
       @include brand-button;
     }
