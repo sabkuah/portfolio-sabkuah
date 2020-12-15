@@ -83,7 +83,11 @@ export default function About() {
 
                     <div className="polaroid" id="card-3">
                       <div className="photo-container">
-                        <img src="steam-day2.jpeg" className="photo" alt="" />
+                        <img
+                          src="steam-day2.jpeg"
+                          className="photo"
+                          alt="steam day"
+                        />
                       </div>
                       <div className="caption">
                         <p>this is card 3</p>
@@ -92,7 +96,11 @@ export default function About() {
 
                     <div className="polaroid" id="card-4">
                       <div className="photo-container">
-                        <img src="shrek.png" className="photo"></img>
+                        <img
+                          src="shrek.png"
+                          className="photo"
+                          alt="shrek"
+                        ></img>
                       </div>
                       <div className="caption">
                         <p>this is card 4</p>
