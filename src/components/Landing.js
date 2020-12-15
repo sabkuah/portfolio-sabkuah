@@ -19,7 +19,7 @@ export default class Landing extends Component {
           <div id="welcome">
             <img
               className="landing-cartoon"
-              src="profile_cartoon.svg"
+              src="sabc.gif"
               alt="cartoon of me"
               // style={{ width: "300px", "margin-bottom": "20px" }}
             />

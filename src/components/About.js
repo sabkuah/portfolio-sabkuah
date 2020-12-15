@@ -51,7 +51,7 @@ export default function About() {
 
                           <div className="col-sm-12 col-md-3">
                             <img
-                              src="cartoon_standing.png"
+                              src="sab-standing.png"
                               alt="cartoon of me"
                               className="standing-cartoon"
                             />
