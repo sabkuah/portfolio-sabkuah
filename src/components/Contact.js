@@ -14,12 +14,13 @@ export default class Contact extends Component {
         variants={pageWipe}
         transition={pageTransitionSlow}
         className="landing"
+        id="contact"
       >
         <div id="landing-message">
           <div id="welcome">
             <img
               className="landing-cartoon"
-              src="profile_cartoon.svg"
+              src="sabc.png"
               alt="cartoon of me"
             />
             <h1>Send me a message</h1>
@@ -50,7 +51,7 @@ export default class Contact extends Component {
                     <div className="note-content px-3">
                       <h2>Contact Me</h2>
                       <form>
-                        <div class="form-group py-3">
+                        <div class="form-group py-2">
                           <label for="inputEmail4">Your Email</label>
                           <input
                             type="email"
@@ -59,18 +60,18 @@ export default class Contact extends Component {
                             placeholder="Email"
                           />
                         </div>
-                        <div class="form-group py-3">
+                        <div class="form-group py-2">
                           <label for="exampleFormControlTextarea1">
                             Message
                           </label>
                           <textarea
                             class="form-control"
                             id="exampleFormControlTextarea1"
-                            rows="8"
+                            rows="5"
                             placeholder="Your message"
                           ></textarea>
                         </div>
-                        <button type="submit" class="btn btn-success">
+                        <button type="submit" class="form-button">
                           Submit
                         </button>
                       </form>

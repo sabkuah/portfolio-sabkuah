@@ -1,3 +1,14 @@
+#contact {
+  #landing-message #welcome {
+    .landing-cartoon {
+      margin: 0;
+    }
+
+    h1 {
+      margin: 0;
+    }
+  }
+}
 .contact-container {
   width: 100%;
   height: fit-content;
@@ -10,8 +21,11 @@
   width: 90%;
   margin: 5%;
   padding: 2%;
-  max-height: 90%;
-  height: 100%;
+}
+
+.form-button {
+  @include brand-button;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
