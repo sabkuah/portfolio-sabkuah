@@ -5,7 +5,12 @@ export default class PortfolioProject extends Component {
     const { id, name, img, desc, tech } = this.props;
     return (
       <li key={id} className="project-sticky">
-        <a data-toggle="modal" data-target="#test" href="#.html">
+        <a
+          data-toggle="modal"
+          data-target="#test"
+          href="#.html"
+          class="project-link"
+        >
           <h2 className="project-name">{name}</h2>
           <img src={img} alt={name} />
           <div className="techList">

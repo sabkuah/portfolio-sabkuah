@@ -86,6 +86,13 @@
     .title-sticky .filter-btn {
       @include brand-button;
     }
+
+    .title-sticky .filter-btn-active {
+      @include brand-button;
+      background-color: #4a777a;
+      outline: none;
+    }
+
     .title-sticky {
       max-width: 50% !important;
     }
