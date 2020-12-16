@@ -34,28 +34,45 @@ export default function About() {
                     <div className="note" id="about-me">
                       <div className="tape" />
                       <div className="note-content">
-                        <h2>Sabrina Kuah!!</h2>
+                        <h2 style={{ "font-size": "36px" }}>
+                          Education is my passion, <br />
+                          Web Development is my niche.
+                        </h2>
                         <div className="row">
                           <div className="col-sm-12 col-md-8">
+                            <h5 style={{ color: "#4a777a" }}>
+                              I decided to learn to code in <br /> a grade five
+                              classroom.
+                            </h5>
+                            <br />
                             <p>
-                              I am currently completing the SSD program at BCIT.
+                              I have always been interested in STEM (science,
+                              technology, engineering and mathematics) education
+                              and its impacts on problem-solving and resilience.
+                              I attended workshops and challenged my students to
+                              learn code. What began as a challenge for my
+                              students however, soon became a personal challenge
+                              for me. The more questions they asked, the more
+                              greater my curiousity grew.
+                              <br />
+                              <br />I started coding alongside ten year-olds
+                              using Microbits and block code but this year, I
+                              will have completed my first of many steps in to
+                              the world of software development and
                             </p>
-
-                            <p>
-                              Lorem ipsum dolor sit amet consectetur,
-                              adipisicing elit. Magnam quos asperiores quod a
-                              aliquam nobis sed recusandae minima quidem, et
-                              soluta accusantium sit in suscipit! Earum
-                              voluptatem ducimus cumque cupiditate!
-                            </p>
+                            <h5 style={{ color: "#4a777a" }}>
+                              I am so excited.
+                            </h5>
                           </div>
 
-                          <div className="col-sm-12 col-md-3">
-                            <img
-                              src="sab-standing.png"
-                              alt="cartoon of me"
-                              className="standing-cartoon"
-                            />
+                          <div className="col-sm-12 col-md-4">
+                            <div className="d-flex justify-content-center mt-5">
+                              <img
+                                src="sab-standing.png"
+                                alt="cartoon of me"
+                                className="standing-cartoon"
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -69,7 +86,10 @@ export default function About() {
                       </div>
 
                       <div className="caption row">
-                        <p>Dry coding on STEAM Day</p>
+                        <p>
+                          Navigating out of a maze by chaining commands on STEM
+                          day
+                        </p>
                       </div>
                     </div>
 
@@ -78,7 +98,10 @@ export default function About() {
                         <img src="microbit.jpeg" className="photo" alt="" />
                       </div>
                       <div className="caption">
-                        <p>Coding with Microbits</p>
+                        <p>
+                          A Microbit reaction timer game that responds to body
+                          conductivity
+                        </p>
                       </div>
                     </div>
 
@@ -116,7 +139,7 @@ export default function About() {
                       <li className="about-sticky" id="languages">
                         <h2>Technologies</h2>
                         <p>HTML/CSS/SCSS</p>
-                        <p>React/Javascript</p>
+                        <p>React/Javascript ES6</p>
                         <p>MSSQL</p>
                         <p>C# / ASP.NET</p>
                       </li>
@@ -144,11 +167,11 @@ export default function About() {
                 <div className="tape" />
                 <div className="note-content">
                   <h2>Education</h2>
-                  <li>Software Systems Developer Certificate</li>
+                  <h5>Software Systems Developer Certificate</h5>
                   <p>BCIT (May 2021)</p>
-                  <li>Master of Teaching</li>
+                  <h5>Master of Teaching</h5>
                   <p>University of Toronto (2017)</p>
-                  <li>Bachelor of Science in Biology</li>
+                  <h5>Bachelor of Science in Biology</h5>
                   <p>University of British Columbia (2014)</p>
                 </div>
 
@@ -159,35 +182,18 @@ export default function About() {
               <div className="note secondary-notes" id="other-skills">
                 <div className="tape" />
                 <div className="note-content">
-                  <h2>Other Skills</h2>
-                  <li>
-                    I worked at the Gap as a sales associate then team lead for
-                    seven years while I was in school.{" "}
-                  </li>
-                  <li>I've taught every grade from pre-K to grade 12.</li>
-                  <li>
-                    I worked in biotech and as a researcher at the BC Cancer
-                    Agency.
-                  </li>
+                  <h2>Work Experience</h2>
+                  <h5>Intermediate Classroom Teacher</h5>
+                  <p>for the Vancouver School Board</p>
+                  <h5>Researcher </h5>
+                  <p>at BC Cancer Research Center</p>
+                  <h5>Sales Manager </h5>
+                  <p>at the Gap</p>
                 </div>
 
                 <div className="left-shadow"></div>
                 <div className="right-shadow"></div>
               </div>
-              {/* Outside of Work Sticky */}
-              {/* <div className="note secondary-notes" id="outside-of-work">
-                <div className="tape" />
-                <div className="note-content">
-                  <h2>Outside of Work</h2>
-                  <p>
-                    I have a cat named Monkey, I've lived in British Columbia,
-                    Alberta, Ontario and South Korea.
-                  </p>
-                </div>
-
-                <div className="left-shadow"></div>
-                <div className="right-shadow"></div>
-              </div> */}
             </div>
           </div>
         </div>

@@ -40,7 +40,7 @@
   .about-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
     //Note with cartoon
     .main-note-container {
@@ -102,6 +102,19 @@
             height: 100%;
           }
         }
+
+        .caption {
+          margin: 2%;
+        }
+      }
+    }
+
+    .secondary-notes {
+      h5 {
+        color: #4a777a;
+      }
+      p {
+        font-size: 0.75em;
       }
     }
   }
