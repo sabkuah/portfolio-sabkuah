@@ -20,8 +20,9 @@ export default function About() {
               <div className="title-sticky">
                 <h3>A Little About Me</h3>
                 <div className="about-btn-container">
-                  <button className="about-btns">See Resume</button>
-                  <button className="about-btns">See Portfolio</button>
+                  <a href="https://drive.google.com/file/d/1eH8p1ZbH-gV-pccj6qgn-ppfFllUndNi/view?usp=sharing">
+                    <button className="about-btns">See Resume</button>
+                  </a>
                 </div>
               </div>
             </div>

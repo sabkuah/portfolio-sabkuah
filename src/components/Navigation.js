@@ -46,9 +46,15 @@ export default class Navigation extends Component {
             </li>
           </div>
           <div className="social-icons">
-            <FiGithub className="icon" />
-            <FiLinkedin className="icon" />
-            <FiMail className="icon" />
+            <a href="https://github.com/sabkuah">
+              <FiGithub className="icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/sabkuah/">
+              <FiLinkedin className="icon" />
+            </a>
+            <a href="mailto:swkuah@gmail.com">
+              <FiMail className="icon" />
+            </a>
           </div>
         </div>
       </nav>

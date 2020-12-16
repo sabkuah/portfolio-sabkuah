@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { pageTransitionSlow, pageWipe } from "./common/Animation";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 
@@ -25,18 +24,19 @@ export default class Contact extends Component {
             />
             <h1>Send me a message</h1>
             <div className="row" id="landing-buttons">
-              <Link to="/">
+              <a href="https://github.com/sabkuah">
                 <li className="l-btn">
                   GitHub
                   <FiGithub className="icon mx-2" />
                 </li>
-              </Link>
-              <Link to="/">
+              </a>
+
+              <a href="https://www.linkedin.com/in/sabkuah/">
                 <button className="l-btn">
                   LinkedIn
                   <FiLinkedin className="icon mx-2" />
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
