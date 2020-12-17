@@ -56,9 +56,9 @@ export default function About() {
                               greater my curiousity grew.
                               <br />
                               <br />I started coding alongside ten year-olds
-                              using Microbits and block code but this year, I
-                              will have completed my first of many steps in to
-                              the world of software development and
+                              using Microbits and block code. This year, I will
+                              have completed my first of many steps in to the
+                              world of web development and
                             </p>
                             <h5 style={{ color: "#4a777a" }}>
                               I am so excited.
