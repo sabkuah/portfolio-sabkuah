@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { motion } from "framer-motion";
-import { pageTransitionSlow, pageWipe } from "./common/Animation";
+import { pageTransitionSlow, pageFade } from "./common/Animation";
 import { getProjects, getTechnologies } from "../data/ProjectData";
 import PortfolioProject from "./Portfolio-project";
 import TechFilter from "./TechFilter";
@@ -63,7 +63,7 @@ export default class Portfolio extends Component {
         initial="initial"
         animate="in"
         exit="out"
-        variants={pageWipe}
+        variants={pageFade}
         transition={pageTransitionSlow}
         className="portfolio-page"
       >

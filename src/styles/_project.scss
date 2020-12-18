@@ -38,6 +38,11 @@ ul li img {
   padding-bottom: 2%;
 }
 
+ul li a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 .techList {
   display: flex;
   justify-content: center;

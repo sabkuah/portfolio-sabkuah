@@ -9,7 +9,7 @@ const projects = [
     link: "",
     screenshots: ["Suki/suki1.png", "Suki/suki2.png"],
     details:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repellat magni porro, quam fugiat doloremque, asperiores vitae, inventore non molestias rem dolore! Commodi similique sint omnis consectetur veritatis, incidunt eum.",
+      "The Suki Online Store features a front-end built using HTML, SCSS and ES6 Javascript.  It includes a product catalog, a cart and checkout form.  This was a group project created during the SSD program.",
   },
   {
     id: "2",
