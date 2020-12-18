@@ -4,17 +4,33 @@ import { pageTransition, pageFade } from "./common/Animation";
 import { getProjects, getTechnologies } from "../data/ProjectData";
 import PortfolioProject from "./Portfolio-project";
 import TechFilter from "./TechFilter";
+import ProjectModal from "./Project-modal";
 import { FiGithub } from "react-icons/fi";
 
 function createProject(project) {
   return (
     <PortfolioProject
-      key={project.id}
+      id={project.id}
       name={project.name}
       img={project.img}
       desc={project.desc}
       tech={project.tech}
       link={project.link}
+    />
+  );
+}
+
+function createModal(project) {
+  return (
+    <ProjectModal
+      id={project.id}
+      name={project.name}
+      img={project.img}
+      desc={project.desc}
+      tech={project.tech}
+      link={project.link}
+      screenshots={project.screenshots}
+      details={project.details}
     />
   );
 }
@@ -78,60 +94,7 @@ export default class Portfolio extends Component {
           </div>
         </div>
         {/* replace modal code to be dynamically rendered */}
-        <div
-          class="modal fade"
-          id="test"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalLongTitle"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">
-                  Project title
-                </h5>
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body row">
-                <div className="col-md-6 project-description">
-                  <ul>
-                    <li>What inspired this project?</li>
-                    <li>The hardest part of this prohect:</li>
-                    <li>What I learned from this project:</li>
-                  </ul>
-                </div>
-                <div className="col-md-6 project-screenshots">
-                  <img src="shrek.png" alt="placeholder" width="300px"></img>
-                  <img src="furious.png" alt="placeholder" width="300px"></img>
-                </div>
-              </div>
-              <div class="modal-footer justify-content-center">
-                <button type="button" class="btn btn-primary">
-                  Live Demo
-                </button>
-                <button type="button" class="btn btn-success">
-                  <FiGithub />
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        {filteredProjects.map(createModal)}
       </motion.div>
     );
   }
