@@ -163,7 +163,39 @@
     }
   }
 
-  @media all and (min-width: 1025px) {
+  // @media all and (min-width: 820px) {
+  //   #landing-board {
+  //     .frame-inner {
+  //       width: 100%;
+  //       @include inner-frame-lg;
+  //       position: relative;
+
+  //       li {
+  //         height: 8em;
+  //         width: 8em;
+  //       }
+
+  //       #s1 {
+  //         position: absolute;
+  //         top: 10%;
+  //         left: 10%;
+  //       }
+
+  //       #s2 {
+  //         position: absolute;
+  //         top: 30%;
+  //         left: 60%;
+  //       }
+
+  //       #s3 {
+  //         position: absolute;
+  //         top: 55%;
+  //         left: 20%;
+  //       }
+  //     }
+  //   }
+
+  @media all and (min-width: 1050px) {
     display: flex;
 
     // //Left Welcome
@@ -186,52 +218,52 @@
         }
       }
     }
+  }
 
-    #landing-board {
-      width: 50vw;
-      height: calc(92vh - 56px);
+  #landing-board {
+    width: 50vw;
+    height: calc(92vh - 56px);
+    position: relative;
+
+    .board-wrapper {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .frame-outer {
+      @include outer-frame-lg;
+      height: 100%;
+    }
+
+    .frame-inner {
+      width: 100%;
+      @include inner-frame-lg;
       position: relative;
 
-      .board-wrapper {
-        height: 100%;
-        width: 100%;
+      li {
+        height: 8em;
+        width: 8em;
+      }
+
+      #s1 {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 15%;
+        left: 10%;
       }
 
-      .frame-outer {
-        @include outer-frame-lg;
-        height: 100%;
+      #s2 {
+        position: absolute;
+        top: 30%;
+        left: 60%;
       }
 
-      .frame-inner {
-        width: 100%;
-        @include inner-frame-lg;
-        position: relative;
-
-        li {
-          height: 8em;
-          width: 8em;
-        }
-
-        #s1 {
-          position: absolute;
-          top: 15%;
-          left: 10%;
-        }
-
-        #s2 {
-          position: absolute;
-          top: 30%;
-          left: 60%;
-        }
-
-        #s3 {
-          position: absolute;
-          top: 55%;
-          left: 20%;
-        }
+      #s3 {
+        position: absolute;
+        top: 55%;
+        left: 20%;
       }
     }
   }

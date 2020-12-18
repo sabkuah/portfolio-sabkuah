@@ -1,13 +1,13 @@
 const projects = [
   {
     id: "1",
-    img: "suki.gif",
+    img: "Suki/suki.gif",
     name: "Suki Online Store",
     desc:
       "A snowboard e-commerce site with a shopping cart and checkout. Collaboration using Github and Slack.",
     tech: ["HTML", "SCSS", "JS"],
-    link: "wwww.google.ca",
-    screenshots: [],
+    link: "",
+    screenshots: ["Suki/suki1.png", "Suki/suki2.png"],
     details:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repellat magni porro, quam fugiat doloremque, asperiores vitae, inventore non molestias rem dolore! Commodi similique sint omnis consectetur veritatis, incidunt eum.",
   },
@@ -20,7 +20,8 @@ const projects = [
     tech: ["React"],
     link: "",
     screenshots: [],
-    details: ``,
+    details:
+      "Sabflix is a movie website built using React with data from the MovieDB API.",
   },
 
   {
@@ -37,7 +38,8 @@ const projects = [
       "PokeVerse/pokeverse3.png",
       "PokeVerse/pokeverse4.png",
     ],
-    details: `This is a writeup of PokeVerse`,
+    details:
+      "PokeVerse is a web application with razor pages, a MSSQL server database and .NET Core backend.  The app allows registered users to add pokemon from a catalog to pokedex and delete them.  Changes to the user's pokedex are stored in the database.  The app's catalogue page has pagination, filtering and sorting features.  It also includes security features such as Google ReCaptcha and identity verification using SendGrid. This app is deployed on Azure web services.",
   },
   {
     id: "4",
@@ -48,18 +50,20 @@ const projects = [
     tech: ["React"],
     link: "",
     screenshots: [],
-    details: ``,
+    details:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repellat magni porro, quam fugiat doloremque, asperiores vitae, inventore non molestias rem dolore! Commodi similique sint omnis consectetur veritatis, incidunt eum.",
   },
   {
     id: "5",
     img: "furious.png",
     name: "Furious 7 (2015)",
     desc:
-      "I don't have friends. I got family. I don't have cars, I have goddamn machines.",
+      "I don't have friends. I got family. I don't have cars, I have machines.",
     tech: ["Hi-speed Driving", "HTML"],
     link: "",
     screenshots: [],
-    details: ``,
+    details:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repellat magni porro, quam fugiat doloremque, asperiores vitae, inventore non molestias rem dolore! Commodi similique sint omnis consectetur veritatis, incidunt eum.",
   },
   {
     id: "6",
@@ -69,7 +73,8 @@ const projects = [
     tech: ["JS", "Sword-fighting"],
     link: "",
     screenshots: [],
-    details: ``,
+    details:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repellat magni porro, quam fugiat doloremque, asperiores vitae, inventore non molestias rem dolore! Commodi similique sint omnis consectetur veritatis, incidunt eum.",
   },
 ];
 

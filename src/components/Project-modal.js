@@ -42,7 +42,7 @@ export default class ProjectModal extends Component {
               </div>
               <div className="project-description">{details}</div>
               <div class="modal-footer justify-content-center">
-                <a href={link}>
+                <a href={link} style={{ display: link ? "" : "none" }}>
                   <button type="button" class="btn btn-primary">
                     Live Demo
                   </button>

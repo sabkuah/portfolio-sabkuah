@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { pageTransition, pageFade } from "./common/Animation";
+import { pageTransitionSlow, pageWipe } from "./common/Animation";
 
 export default function About() {
   return (
@@ -8,8 +8,8 @@ export default function About() {
       initial="initial"
       animate="in"
       exit="out"
-      variants={pageFade}
-      transition={pageTransition}
+      variants={pageWipe}
+      transition={pageTransitionSlow}
       className="about-page"
     >
       <div className="board-wrapper">

@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { motion } from "framer-motion";
-import { pageTransition, pageFade } from "./common/Animation";
+import { pageTransitionSlow, pageFade, pageWipe } from "./common/Animation";
 import { getProjects, getTechnologies } from "../data/ProjectData";
 import PortfolioProject from "./Portfolio-project";
 import TechFilter from "./TechFilter";
 import ProjectModal from "./Project-modal";
-import { FiGithub } from "react-icons/fi";
 
 function createProject(project) {
   return (
@@ -64,8 +63,8 @@ export default class Portfolio extends Component {
         initial="initial"
         animate="in"
         exit="out"
-        variants={pageFade}
-        transition={pageTransition}
+        variants={pageWipe}
+        transition={pageTransitionSlow}
         className="portfolio-page"
       >
         <div className="board-wrapper">
