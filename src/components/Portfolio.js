@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { motion } from "framer-motion";
-import { pageTransitionSlow, pageFade, pageWipe } from "./common/Animation";
+import { pageTransitionSlow, pageWipe } from "./common/Animation";
 import { getProjects, getTechnologies } from "../data/ProjectData";
 import PortfolioProject from "./Portfolio-project";
 import TechFilter from "./TechFilter";
