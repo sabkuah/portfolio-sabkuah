@@ -52,12 +52,12 @@ export default function About() {
                               I attended workshops and challenged my students to
                               learn code. What began as a challenge for my
                               students however, soon became a personal challenge
-                              for me. The more questions they asked, the more
-                              greater my curiousity grew.
+                              for me. The more questions they asked, the greater
+                              my curiousity grew.
                               <br />
                               <br />I started coding alongside ten year-olds
                               using Microbits and block code. This year, I will
-                              have completed my first of many steps in to the
+                              have completed my first of many steps into the
                               world of web development and
                             </p>
                             <h5 style={{ color: "#4a777a" }}>
