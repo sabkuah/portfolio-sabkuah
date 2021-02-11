@@ -58,6 +58,7 @@ export default class Contact extends Component {
                             class="form-control"
                             id="inputEmail4"
                             placeholder="Email"
+                            disabled
                           />
                         </div>
                         <div class="form-group py-2">
@@ -69,6 +70,7 @@ export default class Contact extends Component {
                             id="exampleFormControlTextarea1"
                             rows="5"
                             placeholder="Your message"
+                            disabled
                           ></textarea>
                         </div>
                         <button type="submit" class="form-button">

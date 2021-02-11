@@ -1,12 +1,20 @@
 const projects = [
   {
     id: "5",
-    img: "furious.png",
+    img: "SoilMates/soilmates-1.gif",
     name: "Soil-Mates",
     desc: "A CRUD app for connecting plant lovers with local plant stores",
     tech: ["NodeJS", "MongoDB", "EJS"],
     link: "https://soil-mates.herokuapp.com/",
-    screenshots: [],
+    screenshots: [
+      "SoilMates/soilmates-1.gif",
+      "SoilMates/soilmates-2.png",
+      "SoilMates/soilmates-3.png",
+      "SoilMates/soilmates-4.png",
+      "SoilMates/soilmates-5.png",
+      "SoilMates/soilmates-6.png",
+      "SoilMates/soilmates-7.png",
+    ],
     details: `- Applied learning to create a full-stack JavaScript passion project
       - Utilized Restful API routes to add CRUD functionality for local plant stores, their products and reviews
       - Rendered views conditionally based on user authentication and users’ roles Protected data using client and server-side validation, with error-handling using custom middleware

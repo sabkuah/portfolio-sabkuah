@@ -20,7 +20,7 @@ export default function About() {
               <div className="title-sticky">
                 <h3>A Little About Me</h3>
                 <div className="about-btn-container">
-                  <a href="https://drive.google.com/file/d/1eH8p1ZbH-gV-pccj6qgn-ppfFllUndNi/view?usp=sharing">
+                  <a href="https://drive.google.com/file/d/1HYHNk-qBI7ayMNPTXQQCshZNn_3fxs0I/view?usp=sharing">
                     <button className="about-btns">See Resume</button>
                   </a>
                 </div>
@@ -114,11 +114,14 @@ export default function About() {
                         />
                       </div>
                       <div className="caption">
-                        <p>this is card 3</p>
+                        <p>
+                          Collaborating and problem solving using block code
+                          commands{" "}
+                        </p>
                       </div>
                     </div>
 
-                    <div className="polaroid" id="card-4">
+                    {/* <div className="polaroid" id="card-4">
                       <div className="photo-container">
                         <img
                           src="shrek.png"
@@ -127,9 +130,9 @@ export default function About() {
                         ></img>
                       </div>
                       <div className="caption">
-                        <p>this is card 4</p>
+                        <p></p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 {/* RIGHT COLUMN: STICKIES */}
@@ -138,10 +141,10 @@ export default function About() {
                     <ul>
                       <li className="about-sticky" id="languages">
                         <h2>Technologies</h2>
+                        <p>React / Javascript ES6</p>
+                        <p>MongoDB / Express / NodeJS</p>
+                        <p>C# / ASP.NET /SQL</p>
                         <p>HTML/CSS/SCSS</p>
-                        <p>React/Javascript ES6</p>
-                        <p>MSSQL</p>
-                        <p>C# / ASP.NET</p>
                       </li>
                       <li className="about-sticky" id="skills">
                         <h2>Skills</h2>
@@ -149,6 +152,7 @@ export default function About() {
                         <p>Slack Collaboration</p>
                         <p>Kanban Project Boards</p>
                         <p>Agile Development</p>
+                        <p>Responsive Web Design</p>
                       </li>
                       <li className="about-sticky" id="knowledge">
                         <h2>Tools</h2>
