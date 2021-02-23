@@ -13,7 +13,6 @@ const projects = [
       "SoilMates/soilmates-4.png",
       "SoilMates/soilmates-5.png",
       "SoilMates/soilmates-6.png",
-      "SoilMates/soilmates-7.png",
     ],
     details: `- Applied learning to create a full-stack JavaScript passion project
       - Utilized Restful API routes to add CRUD functionality for local plant stores, their products and reviews
