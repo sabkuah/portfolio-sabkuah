@@ -1,28 +1,26 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class PortfolioProject extends Component {
-  render() {
-    const { id, name, img, desc, tech } = this.props;
-    console.log("projectkey", id);
-    return (
-      <li key={id} className="project-sticky">
-        <a
-          data-toggle="modal"
-          href={`#${id}`}
-          data-target={`#modal${id}`}
-          //href="#modalID"
-          class="project-link"
-        >
-          <h2 className="project-name">{name}</h2>
-          <img src={img} alt={name} />
-          <div className="techList">
-            {tech.map((t) => {
-              return <h4 className="tech-badges">{t}</h4>;
-            })}
-          </div>
-          <p className="project-desc">{desc}</p>
-        </a>
-      </li>
-    );
-  }
-}
+const PortfolioProject = ({ project }) => {
+  return (
+    <li key={project.id} className="project-sticky">
+      <a
+        data-toggle="modal"
+        href={`#${project.id}`}
+        data-target={`#modal${project.id}`}
+        //href="#modalID"
+        class="project-link"
+      >
+        <h2 className="project-name">{project.name}</h2>
+        <img src={project.img} alt={project.name} />
+        <div className="techList">
+          {project.tech.map((t) => {
+            return <h4 className="tech-badges">{t}</h4>;
+          })}
+        </div>
+        <p className="project-desc">{project.desc}</p>
+      </a>
+    </li>
+  );
+};
+
+export default PortfolioProject;
