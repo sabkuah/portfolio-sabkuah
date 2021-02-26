@@ -1,10 +1,19 @@
-import { prettyDOM } from "@testing-library/react";
 import React, { useState, useEffect } from "react";
+import { FiFilter } from "react-icons/fi";
 
-const TechFilter = ({ projects }) => {
+const TechFilter = ({
+  projects,
+  filterFE,
+  filterBE,
+  filterDB,
+  noFilterCheck,
+}) => {
   const [frontEndTech, setFrontEndTech] = useState([]);
   const [backEndTech, setBackEndTech] = useState([]);
   const [dbTech, setDbTech] = useState([]);
+  const [FEfilter, setFEfilter] = useState("all");
+  const [BEfilter, setBEfilter] = useState("all");
+  const [DBfilter, setDBfilter] = useState("all");
 
   const getFrontEnd = () => {
     let frontEndTech = [];
@@ -51,33 +60,79 @@ const TechFilter = ({ projects }) => {
     getFrontEnd();
     getBackEnd();
     getDatabases();
-  }, []);
+    noFilterCheck(FEfilter, BEfilter, DBfilter);
+  }, [FEfilter, BEfilter, DBfilter]);
 
   return (
     <div>
       <h5>Filter By:</h5>
       <div class="d-flex row align-items-center justify-content-center">
         <div class="form-group px-2 col">
-          <select class="form-control" id="frontEnd">
-            <option>Front End</option>
+          <label for="frontEnd">
+            <FiFilter /> Front End
+          </label>
+          <select
+            class="form-control"
+            id="frontEnd"
+            value={FEfilter}
+            onChange={(e) => {
+              setFEfilter(e.currentTarget.value);
+              setBEfilter("all");
+              setDBfilter("all");
+              filterFE(e.currentTarget.value);
+            }}
+          >
+            <option value="all">All</option>
             {frontEndTech.map((t) => (
-              <option>{t}</option>
+              <option key={t} value={t}>
+                {t}
+              </option>
             ))}
           </select>
         </div>
         <div class="form-group px-2 col">
-          <select class="form-control" id="backEnd">
-            <option>Back End</option>
+          <label for="backEnd">
+            <FiFilter /> Back End
+          </label>
+          <select
+            class="form-control"
+            id="backEnd"
+            value={BEfilter}
+            onChange={(e) => {
+              setBEfilter(e.currentTarget.value);
+              setFEfilter("all");
+              setDBfilter("all");
+              filterBE(e.currentTarget.value);
+            }}
+          >
+            <option value="all">All</option>
             {backEndTech.map((t) => (
-              <option>{t}</option>
+              <option key={t} value={t}>
+                {t}
+              </option>
             ))}
           </select>
         </div>
         <div class="form-group px-2 col">
-          <select class="form-control" id="db">
-            <option>Database</option>
+          <label for="db">
+            <FiFilter /> Database
+          </label>
+          <select
+            class="form-control"
+            id="db"
+            value={DBfilter}
+            onChange={(e) => {
+              setDBfilter(e.currentTarget.value);
+              setFEfilter("all");
+              setBEfilter("all");
+              filterDB(e.currentTarget.value);
+            }}
+          >
+            <option value="all">All</option>
             {dbTech.map((t) => (
-              <option>{t}</option>
+              <option key={t} value={t}>
+                {t}
+              </option>
             ))}
           </select>
         </div>

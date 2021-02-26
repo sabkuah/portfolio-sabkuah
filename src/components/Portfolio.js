@@ -1,16 +1,70 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { pageTransitionSlow, pageFade } from "./common/Animation";
-import { projects } from "../data/ProjectData";
+import { projects as allProjects } from "../data/ProjectData";
 import PortfolioProject from "./Portfolio-project";
 import TechFilter from "./TechFilter";
 import ProjectModal from "./Project-modal";
 
 const Portfolio = () => {
-  const [filteredProjects, setFilteredProjects] = useState(projects);
+  const [filteredProjects, setFilteredProjects] = useState(allProjects);
   const [technologies, setTechnologies] = useState([]);
 
-  useEffect(() => {}, []);
+  const noFilterCheck = (fe, be, db) => {
+    if (fe === "all" && be === "all" && db === "all") {
+      setFilteredProjects(allProjects);
+    }
+  };
+
+  const filterFE = (query) => {
+    setFilteredProjects(allProjects);
+    let filteredArray = [];
+    allProjects.filter((p) => {
+      const res = p.frontEnd.includes(query);
+      if (res) {
+        filteredArray.push(p);
+      }
+    });
+    console.log("filteredArray", filteredArray);
+
+    setFilteredProjects(filteredArray);
+  };
+
+  const filterBE = (query) => {
+    setFilteredProjects(allProjects);
+    let filteredArray = [];
+    allProjects.filter((p) => {
+      const res = p.backEnd.includes(query);
+      if (res) {
+        filteredArray.push(p);
+      }
+    });
+    console.log("filteredArray", filteredArray);
+
+    setFilteredProjects(filteredArray);
+  };
+
+  const filterDB = (query) => {
+    setFilteredProjects(allProjects);
+    let filteredArray = [];
+    allProjects.filter((p) => {
+      const res = p.database.includes(query);
+      if (res) {
+        filteredArray.push(p);
+      }
+    });
+    console.log("filteredArray", filteredArray);
+
+    setFilteredProjects(filteredArray);
+  };
+
+  const getFilteredProjects = () => {
+    return filteredProjects;
+  };
+
+  useEffect(() => {
+    getFilteredProjects();
+  }, [filteredProjects]);
 
   return (
     <motion.div
@@ -29,7 +83,11 @@ const Portfolio = () => {
                 <h3>Projects I've Worked On</h3>
                 <div className="project-filters">
                   <TechFilter
-                    projects={projects}
+                    projects={allProjects}
+                    filterFE={filterFE}
+                    filterBE={filterBE}
+                    filterDB={filterDB}
+                    noFilterCheck={noFilterCheck}
                     //onFilterSelect={handleFilterSelect}
                     //selectedFilter={selectedFilter}
                   />
