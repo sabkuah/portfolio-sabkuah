@@ -1,13 +1,18 @@
-const projects = [
+export const projects = [
   {
     id: "5",
     img: "SoilMates/soilmates-1.gif",
     name: "Soil-Mates",
     desc: "A CRUD app for connecting plant lovers with local plant stores",
+    frontEnd: ["EJS"],
+    backEnd: ["NodeJS"],
+    database: ["MongoDB"],
     tech: ["NodeJS", "MongoDB", "EJS"],
     link: "https://soil-mates.herokuapp.com/",
+    github: "https://github.com/sabkuah/SoilMates",
+    type: "Personal Project",
+    features: ["GeoJSON, MapBox", "Cloudinary Image Uploads", "RestAPI"],
     screenshots: [
-      "SoilMates/soilmates-1.gif",
       "SoilMates/soilmates-2.png",
       "SoilMates/soilmates-3.png",
       "SoilMates/soilmates-4.png",
@@ -25,8 +30,18 @@ const projects = [
     name: "PokeVerse",
     desc:
       "A Pokemon web app with a MSSQL server database, identity authentication and .NET Core backend",
+    frontEnd: ["Razor Pages"],
+    backEnd: ["C#/.NET"],
+    database: ["MSSQL"],
     tech: ["C#/.NET"],
     link: "https://pokeverse.azurewebsites.net/",
+    github: "https://github.com/sabkuah/PokeVerse",
+    type: "Coursework - Group Project",
+    features: [
+      "Google ReCaptcha",
+      "SendGrid",
+      "Deployed on Azure Web Services",
+    ],
     screenshots: [
       "PokeVerse/pokeverse1.png",
       "PokeVerse/pokeverse2.png",
@@ -42,8 +57,14 @@ const projects = [
     name: "Amazon Clone",
     desc:
       "Clone of Amazon with add-to-cart, Stripe payment, and transaction history using cloud functions",
-    tech: ["React", "NodeJS"],
+    frontEnd: ["React"],
+    backEnd: ["NodeJS"],
+    database: ["FireStore"],
+    tech: [],
     link: "https://sabkuah-961f5.web.app",
+    github: "https://github.com/sabkuah/amazon-clone",
+    type: "Personal Project",
+    features: ["Stripe Payment Integration"],
     screenshots: [
       "Amazon/amazon-2.gif",
       "Amazon/amazon-3.png",
@@ -58,11 +79,17 @@ const projects = [
   {
     id: "4",
     img: "Spotify/spotify-1.gif",
-    name: "Spotify CLone",
+    name: "Spotify Clone",
     desc:
       "Uses SpotifyWebAPI to pull user's playlists, recently played tracks and avatar",
+    frontEnd: ["React"],
+    backEnd: [],
+    database: [],
     tech: ["React"],
     link: "https://spotify-sabkuah.web.app/",
+    github: "https://github.com/sabkuah/spotify-clone",
+    type: "Personal Project",
+    features: [],
     screenshots: [],
     details: `Login redirect to Spotify for user authentication
       Web app pulls user's avatar, list of playlists and 20 most recently played tracks from SpotifyWebAPI`,
@@ -74,8 +101,14 @@ const projects = [
     name: "Suki Online Store",
     desc:
       "A snowboard e-commerce site with a shopping cart and checkout. Collaboration using Github and Slack.",
+    frontEnd: ["HTML/CSS/JS", "SASS"],
+    backEnd: [],
+    database: [],
     tech: ["HTML", "SASS", "JS"],
     link: "",
+    github: "",
+    type: "Coursework - Group Project",
+    features: [],
     screenshots: ["Suki/suki1.png", "Suki/suki2.png"],
     details:
       "The Suki Online Store features a front-end built using HTML, SCSS and ES6 Javascript.  It includes a product catalog, a cart and checkout form.  This was a group project created during the SSD program.",
@@ -84,10 +117,16 @@ const projects = [
     id: "2",
     img: "sabflix.gif",
     name: "Sabflix",
+    frontEnd: ["React"],
+    backEnd: [],
+    database: [],
     desc:
       "A movie website built using React with data from MovieDB API. Includes filtering and pagination",
     tech: ["React"],
     link: "",
+    github: "",
+    type: "Coursework - Individual Project",
+    features: [],
     screenshots: [],
     details:
       "Sabflix is a movie website built using React with data from the MovieDB API.",
@@ -98,26 +137,19 @@ const projects = [
     name: "Scorekeeper.io",
     desc:
       "A simple React application that allows teams to keep track of their score during intense matches of Taboo.",
+    frontEnd: ["React"],
+    backEnd: [],
+    database: [],
     tech: ["React"],
     link: "",
+    github: "",
+    type: "Personal Project",
+    features: [],
     screenshots: [],
     details:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repellat magni porro, quam fugiat doloremque, asperiores vitae, inventore non molestias rem dolore! Commodi similique sint omnis consectetur veritatis, incidunt eum.",
   },
 ];
 
-export function getProjects() {
-  return projects;
-}
-
-export function getTechnologies() {
-  var technologies = [];
-
-  projects.forEach((p) => {
-    p.tech.forEach((t) => {
-      technologies.push(t);
-    });
-  });
-
-  return Array.from(new Set(technologies));
-}
+//Projects to add
+//immagga, covidtrack, yelp,

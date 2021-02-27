@@ -1,100 +1,140 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { pageTransitionSlow, pageFade } from "./common/Animation";
-import { getProjects, getTechnologies } from "../data/ProjectData";
+import { projects as allProjects } from "../data/ProjectData";
 import PortfolioProject from "./Portfolio-project";
 import TechFilter from "./TechFilter";
 import ProjectModal from "./Project-modal";
 
-function createProject(project) {
-  return (
-    <PortfolioProject
-      id={project.id}
-      name={project.name}
-      img={project.img}
-      desc={project.desc}
-      tech={project.tech}
-      link={project.link}
-    />
-  );
-}
+const Portfolio = () => {
+  const [filteredProjects, setFilteredProjects] = useState(allProjects);
+  const [technologies, setTechnologies] = useState([]);
 
-function createModal(project) {
-  return (
-    <ProjectModal
-      id={project.id}
-      name={project.name}
-      img={project.img}
-      desc={project.desc}
-      tech={project.tech}
-      link={project.link}
-      screenshots={project.screenshots}
-      details={project.details}
-    />
-  );
-}
-
-export default class Portfolio extends Component {
-  state = {
-    projects: [],
-    technologies: [],
+  const noFilterCheck = (fe, be, db) => {
+    if (fe === "all" && be === "all" && db === "all") {
+      setFilteredProjects(allProjects);
+    }
   };
 
-  componentDidMount() {
-    const technologies = ["Show All", ...getTechnologies()];
+  const filterFE = (query) => {
+    setFilteredProjects(allProjects);
+    let filteredArray = [];
+    allProjects.filter((p) => {
+      const res = p.frontEnd.includes(query);
+      if (res) {
+        filteredArray.push(p);
+      }
+    });
+    console.log("filteredArray", filteredArray);
 
-    this.setState({ projects: getProjects(), technologies });
-  }
-
-  handleFilterSelect = (filter) => {
-    this.setState({ selectedFilter: filter });
+    setFilteredProjects(filteredArray);
   };
 
-  render() {
-    const { selectedFilter, projects } = this.state;
+  const filterBE = (query) => {
+    setFilteredProjects(allProjects);
+    let filteredArray = [];
+    allProjects.filter((p) => {
+      const res = p.backEnd.includes(query);
+      if (res) {
+        filteredArray.push(p);
+      }
+    });
+    console.log("filteredArray", filteredArray);
 
-    const filteredProjects =
-      selectedFilter && selectedFilter !== "Show All"
-        ? projects.filter((p) => p.tech.includes(selectedFilter))
-        : projects;
+    setFilteredProjects(filteredArray);
+  };
 
-    return (
-      <motion.div
-        initial="initial"
-        animate="in"
-        exit="out"
-        variants={pageFade}
-        transition={pageTransitionSlow}
-        className="portfolio-page"
-      >
-        <div className="board-wrapper">
-          <div className="frame-outer">
-            <div className="frame-inner">
-              <div className="title-box row justify-content-center">
-                <div className="title-sticky">
-                  <h3>Projects I've Worked On</h3>
-                  <div className="project-filters">
-                    <TechFilter
-                      technologies={this.state.technologies}
-                      onFilterSelect={this.handleFilterSelect}
-                      selectedFilter={this.state.selectedFilter}
-                    />
-                  </div>
+  const filterDB = (query) => {
+    setFilteredProjects(allProjects);
+    let filteredArray = [];
+    allProjects.filter((p) => {
+      const res = p.database.includes(query);
+      if (res) {
+        filteredArray.push(p);
+      }
+    });
+    console.log("filteredArray", filteredArray);
+
+    setFilteredProjects(filteredArray);
+  };
+
+  const getFilteredProjects = () => {
+    return filteredProjects;
+  };
+
+  useEffect(() => {
+    getFilteredProjects();
+  }, [filteredProjects]);
+
+  return (
+    <motion.div
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageFade}
+      transition={pageTransitionSlow}
+      className="portfolio-page"
+    >
+      <div className="board-wrapper">
+        <div className="frame-outer">
+          <div className="frame-inner">
+            <div className="title-box row justify-content-center">
+              <div className="title-sticky">
+                <h3>Projects I've Worked On</h3>
+                <div className="project-filters">
+                  <TechFilter
+                    projects={allProjects}
+                    filterFE={filterFE}
+                    filterBE={filterBE}
+                    filterDB={filterDB}
+                    noFilterCheck={noFilterCheck}
+                    //onFilterSelect={handleFilterSelect}
+                    //selectedFilter={selectedFilter}
+                  />
                 </div>
               </div>
+            </div>
 
-              <div className="stickies">
-                <ul className="projects">
-                  {/* flex-box */}
-                  {filteredProjects.map(createProject)}
-                </ul>
-              </div>
+            <div className="stickies">
+              <ul className="projects">
+                {/* flex-box */}
+                {filteredProjects.map((project) => (
+                  <PortfolioProject key={project.id} project={project} />
+                ))}
+              </ul>
             </div>
           </div>
         </div>
-        {/* replace modal code to be dynamically rendered */}
-        {filteredProjects.map(createModal)}
-      </motion.div>
-    );
-  }
-}
+      </div>
+      {/* replace modal code to be dynamically rendered */}
+      {filteredProjects.map((project) => (
+        <ProjectModal key={project.id} project={project} />
+      ))}
+    </motion.div>
+  );
+};
+
+export default Portfolio;
+
+// componentDidMount() {
+//   const technologies = ["Show All", ...getTechnologies()];
+
+//   this.setState({ projects: getProjects(), technologies });
+// }
+
+// handleFilterSelect = (filter) => {
+//   this.setState({ selectedFilter: filter });
+// };
+
+// render() {
+//   const { selectedFilter, projects } = this.state;
+
+//   const filteredProjects =
+//     selectedFilter && selectedFilter !== "Show All"
+//       ? projects.filter((p) => p.tech.includes(selectedFilter))
+//       : projects;
+
+//   return (
+
+//   );
+// }
