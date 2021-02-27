@@ -65,14 +65,14 @@ const TechFilter = ({
 
   return (
     <div>
-      <h5>Filter By:</h5>
-      <div class="d-flex row align-items-center justify-content-center">
-        <div class="form-group px-2 col">
-          <label for="frontEnd">
+      {/* <h5>Filter By:</h5> */}
+      <div className="d-flex row align-items-center justify-content-center">
+        <div className="form-group px-2 col">
+          <label for="frontEnd" className="filter-label">
             <FiFilter /> Front End
           </label>
           <select
-            class="form-control"
+            className="form-control"
             id="frontEnd"
             value={FEfilter}
             onChange={(e) => {
@@ -90,12 +90,12 @@ const TechFilter = ({
             ))}
           </select>
         </div>
-        <div class="form-group px-2 col">
-          <label for="backEnd">
+        <div className="form-group px-2 col">
+          <label for="backEnd" className="filter-label">
             <FiFilter /> Back End
           </label>
           <select
-            class="form-control"
+            className="form-control"
             id="backEnd"
             value={BEfilter}
             onChange={(e) => {
@@ -113,12 +113,12 @@ const TechFilter = ({
             ))}
           </select>
         </div>
-        <div class="form-group px-2 col">
-          <label for="db">
+        <div className="form-group px-2 col">
+          <label for="db" className="filter-label">
             <FiFilter /> Database
           </label>
           <select
-            class="form-control"
+            className="form-control"
             id="db"
             value={DBfilter}
             onChange={(e) => {

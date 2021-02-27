@@ -13,7 +13,6 @@ export const projects = [
     type: "Personal Project",
     features: ["GeoJSON, MapBox", "Cloudinary Image Uploads", "RestAPI"],
     screenshots: [
-      "SoilMates/soilmates-1.gif",
       "SoilMates/soilmates-2.png",
       "SoilMates/soilmates-3.png",
       "SoilMates/soilmates-4.png",
@@ -80,7 +79,7 @@ export const projects = [
   {
     id: "4",
     img: "Spotify/spotify-1.gif",
-    name: "Spotify CLone",
+    name: "Spotify Clone",
     desc:
       "Uses SpotifyWebAPI to pull user's playlists, recently played tracks and avatar",
     frontEnd: ["React"],

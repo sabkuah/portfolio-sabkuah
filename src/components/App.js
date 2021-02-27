@@ -6,6 +6,7 @@ import Contact from "./Contact";
 import Landing from "./Landing";
 import Navigation from "./Navigation";
 import Portfolio from "./Portfolio";
+import Home from "./Home";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
           <Route path="/" exact component={Landing} />
+          {/* <Route path="/" exact component={Home} /> */}
         </AnimatePresence>
       </Router>
     </div>

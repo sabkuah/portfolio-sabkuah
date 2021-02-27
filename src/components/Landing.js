@@ -68,7 +68,10 @@ export default class Landing extends Component {
                     <p>Educator</p>
                   </li>
                   <li id="s3">
-                    <p>Cat Mom</p>
+                    <p>
+                      MERN <br />
+                      Stack
+                    </p>
                   </li>
                 </ul>
               </div>
